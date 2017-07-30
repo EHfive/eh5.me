@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://eh5.me">
-  <title>favicon-api | EH5</title>
+  <title>OpenWrt Hotplug脚本 + Dnspod api 实现ms级延迟的DDNS记录更新 | EH5</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="https://mcht.wicp.net/api/favicon/index.php?url0=&amp;lt; 网站主页链接 &amp;gt;[&amp;amp;update=1]  输出favicon的文本链接 获取favicon链接后默认最少缓存15天,加快再次获取favicon速度,之后再次访问更新缓存 update=1 进行强制更新 ,在服务端同步获取会拖慢加载速度 是对 https://github.com">
-<meta name="keywords" content="api,favicon">
+  <meta name="description" content="一般的话,实现DDNS就是直接使用openwrt的DDNS插件,如下图  这里介绍一个更简便快速的方法 OpenWrt中的Hotplug脚本Hotplug，直译就是热插拔。在OpenWrt中，无论何时一个设备从系统中增删，都产生一个&amp;ldquo;热插拔事件&amp;rdquo;。 每次网络接口启动（up）或者关闭（down）的时候，所有在/etc/hotplug.d/iface/目录中的脚本都会以字母顺序">
 <meta property="og:type" content="article">
-<meta property="og:title" content="favicon-api">
-<meta property="og:url" content="http://eh5.me/favicon-api/index.html">
+<meta property="og:title" content="OpenWrt Hotplug脚本 + Dnspod api 实现ms级延迟的DDNS记录更新">
+<meta property="og:url" content="http://eh5.me/posts/196/index.html">
 <meta property="og:site_name" content="EH5">
-<meta property="og:description" content="https://mcht.wicp.net/api/favicon/index.php?url0=&amp;lt; 网站主页链接 &amp;gt;[&amp;amp;update=1]  输出favicon的文本链接 获取favicon链接后默认最少缓存15天,加快再次获取favicon速度,之后再次访问更新缓存 update=1 进行强制更新 ,在服务端同步获取会拖慢加载速度 是对 https://github.com">
+<meta property="og:description" content="一般的话,实现DDNS就是直接使用openwrt的DDNS插件,如下图  这里介绍一个更简便快速的方法 OpenWrt中的Hotplug脚本Hotplug，直译就是热插拔。在OpenWrt中，无论何时一个设备从系统中增删，都产生一个&amp;ldquo;热插拔事件&amp;rdquo;。 每次网络接口启动（up）或者关闭（down）的时候，所有在/etc/hotplug.d/iface/目录中的脚本都会以字母顺序">
 <meta property="og:locale" content="zh-cmn-Hans">
-<meta property="og:updated_time" content="2017-07-30T15:41:45.340Z">
+<meta property="og:image" content="http://mcht.wicp.net/pic/DDNS/ddns%E6%8F%92%E4%BB%B6.png">
+<meta property="og:image" content="http://mcht.wicp.net/pic/DDNS/success.png">
+<meta property="og:updated_time" content="2017-01-02T10:28:00.587Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="favicon-api">
-<meta name="twitter:description" content="https://mcht.wicp.net/api/favicon/index.php?url0=&amp;lt; 网站主页链接 &amp;gt;[&amp;amp;update=1]  输出favicon的文本链接 获取favicon链接后默认最少缓存15天,加快再次获取favicon速度,之后再次访问更新缓存 update=1 进行强制更新 ,在服务端同步获取会拖慢加载速度 是对 https://github.com">
+<meta name="twitter:title" content="OpenWrt Hotplug脚本 + Dnspod api 实现ms级延迟的DDNS记录更新">
+<meta name="twitter:description" content="一般的话,实现DDNS就是直接使用openwrt的DDNS插件,如下图  这里介绍一个更简便快速的方法 OpenWrt中的Hotplug脚本Hotplug，直译就是热插拔。在OpenWrt中，无论何时一个设备从系统中增删，都产生一个&amp;ldquo;热插拔事件&amp;rdquo;。 每次网络接口启动（up）或者关闭（down）的时候，所有在/etc/hotplug.d/iface/目录中的脚本都会以字母顺序">
+<meta name="twitter:image" content="http://mcht.wicp.net/pic/DDNS/ddns%E6%8F%92%E4%BB%B6.png">
   
     <link rel="alternative" href="/atom.xml" title="EH5" type="application/atom+xml">
   
@@ -149,38 +151,86 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-favicon-api" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-196" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      favicon-api
+      OpenWrt Hotplug脚本 + Dnspod api 实现ms级延迟的DDNS记录更新
     </h1>
   
 
         
-        <a href="/favicon-api/" class="archive-article-date">
-  	<time datetime="2017-02-18T15:31:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-18</time>
+        <a href="/posts/196/" class="archive-article-date">
+  	<time datetime="2016-09-04T04:47:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-09-04</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote><p><a href="https://mcht.wicp.net/api/favicon/index.php?url0=" target="_blank" rel="external">https://mcht.wicp.net/api/favicon/index.php?url0=</a>&lt; 网站主页链接 &gt;[&amp;update=1]</p>
-</blockquote>
-<p>输出favicon的文本链接</p>
-<p>获取favicon链接后默认最少缓存15天,加快再次获取favicon速度,之后再次访问更新缓存</p>
-<p>update=1 进行强制更新 ,在服务端同步获取会拖慢加载速度</p>
-<p>是对 <a href="https://github.com/shiflett/favicon" target="_blank" rel="external">https://github.com/shiflett/favicon</a> 的简单封装</p>
-<p>例:</p>
+        <p>一般的话,实现DDNS就是直接使用openwrt的DDNS插件,如下图</p>
+<p><img src="http://mcht.wicp.net/pic/DDNS/ddns%E6%8F%92%E4%BB%B6.png" alt=""></p>
+<p>这里介绍一个更简便快速的方法</p>
+<h3 id="OpenWrt中的Hotplug脚本"><a href="#OpenWrt中的Hotplug脚本" class="headerlink" title="OpenWrt中的Hotplug脚本"></a>OpenWrt中的Hotplug脚本</h3><p>Hotplug，直译就是热插拔。在OpenWrt中，无论何时一个设备从系统中增删，都产生一个&ldquo;热插拔事件&rdquo;。</p>
+<p>每次网络接口启动（up）或者关闭（down）的时候，所有在<code>/etc/hotplug.d/iface/</code>目录中的脚本都会以字母顺序执行。根据一个不成文的规则，会在每个脚本的前面加上一个数字前缀来设置正确的运行顺序。这就是为什么脚本名称都像：<code>/etc/hotplug.d/iface/nn-scriptname</code>的原因。</p>
+<p>在iface hotplug脚本中有三个主要的环境变量：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">变量名称</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ACTION</td>
+<td style="text-align:left">“ifup” 或者 “ifdown”</td>
+</tr>
+<tr>
+<td style="text-align:left">INTERFACE</td>
+<td style="text-align:left">网络接口的名称，如”wan”</td>
+</tr>
+<tr>
+<td style="text-align:left">DEVICE</td>
+<td style="text-align:left">物理设备的名称，如”br-lan”</td>
+</tr>
+</tbody>
+</table>
+<p>利用hotplug脚本可以在网络接口启动或关闭时执行相应的动作</p>
+<a id="more"></a>
+<h3 id="Dnspod-api"><a href="#Dnspod-api" class="headerlink" title="Dnspod api"></a>Dnspod api</h3><h4 id="更新动态DNS记录"><a href="#更新动态DNS记录" class="headerlink" title="更新动态DNS记录"></a><a href="https://www.dnspod.cn/docs/records.html#dns" target="_blank" rel="external">更新动态DNS记录</a></h4><p>接口地址：</p>
 <ul>
-<li>GET  <a href="https://mcht.wicp.net/api/favicon/index.php?url0=https://sokka.cn" target="_blank" rel="external">https://mcht.wicp.net/api/favicon/index.php?url0=https://sokka.cn</a></li>
-<li>返回  <a href="https://sokka.cn/wp/wp-content/uploads/2016/07/cropped-55000389_p0._1-192x192.jpg" target="_blank" rel="external">https://sokka.cn/wp/wp-content/uploads/2016/07/cropped-55000389_p0._1-192x192.jpg</a></li>
+<li><a href="https://dnsapi.cn/Record.Ddns" target="_blank" rel="external">https://dnsapi.cn/Record.Ddns</a></li>
 </ul>
-<p>可用于显示友情链接的icon</p>
+<p>HTTP请求方式：</p>
+<ul>
+<li>POST</li>
+</ul>
+<p>请求参数：</p>
+<ul>
+<li>公共参数</li>
+<li>domain_id 或 domain, 分别对应域名ID和域名, 提交其中一个即可</li>
+<li>record_id 记录ID，必选</li>
+<li>sub_domain 主机记录，如 www</li>
+<li>record_line 记录线路，通过API记录线路获得，中文，比如：默认，必选</li>
+<li>record_line_id 线路的ID，通过API记录线路获得，英文字符串，比如：&lsquo;10=1&rsquo; 【record_line 和 record_line_id 二者传其一即可，系统优先取 record_line_id】</li>
+<li>value IP地址，例如：6.6.6.6，可选</li>
+</ul>
+<p>响应代码：……</p>
+<p>注意事项：</p>
+<ul>
+<li>如果1小时之内，提交了超过5次没有任何变动的记录修改请求，该记录会被系统锁定1小时，不允许再次修改，所以在开发和测试的过程中，请自行处理IP变动，仅在本地IP发生变动的情况下才调用本接口。</li>
+<li>如何理解没有任何变动的记录修改请求？比如原记录值已经是 1.1.1.1，新的请求还要求修改为 1.1.1.1。</li>
+</ul>
+<p>如此,利用上两项就可以实现ms级延迟的DDNS记录更新</p>
+<p>在<code>/etc/hotplug.d/iface</code>下新建<code>30-dnspod.sh</code>,内容如下</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line"><span class="comment"># wan ifup</span></div><div class="line">[ <span class="variable">$ACTION</span> = <span class="string">"ifup"</span> -a <span class="variable">$INTERFACE</span> = <span class="string">"wan"</span> ]</div><div class="line">wget --post-data=<span class="string">"login_email=USER@MAIL.COM&amp;login_password=YOUR_PASSWORD&amp;format=json&amp;domain_id=12345678&amp;record_id=987654321&amp;record_line=默认&amp;sub_domain=what"</span>  https://dnsapi.cn/Record.Ddns --no-check-certificate --output-document=/dev/null</div></pre></td></tr></table></figure>
+<p>domain_id和record_id可以使用官方的<a href="https://support.dnspod.cn/Support/api" target="_blank" rel="external">客户端</a>或使用<a href="https://www.dnspod.cn/docs/domains.html#id1" target="_blank" rel="external">域名api</a>获取.dnspod ddns api可以不带ip数据,他会获取你的访问ip,如此正确设置好参数和post数据后,每次wan口打开就会执行脚本下的语句,实现A记录更新</p>
+<p>下面是在webshell中执行返回的结果,因为wegt不能验证dnspod的证书,所以要加上<code>--no-check-certificate</code>参数</p>
+<p><img src="http://mcht.wicp.net/pic/DDNS/success.png" alt=""></p>
 
       
 
@@ -189,32 +239,17 @@
     <div class="article-info article-info-index">
       
       
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">api</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">favicon</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
       
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/网络/" class="article-tag-list-link color3">网络</a>
+        			<a href="/categories/openwrt/" class="article-tag-list-link color3">openwrt</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/php/" class="article-tag-list-link color4">php</a>
+        			<a href="/categories/网络/" class="article-tag-list-link color3">网络</a>
         		</li>
       		
 		</ul>
@@ -269,7 +304,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://eh5.me/favicon-api/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://eh5.me/posts/196/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -283,18 +318,18 @@
   
 <nav id="article-nav">
   
-    <a href="/OSD-Lyrics/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/posts/favicon-api/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Ubuntu 下安装 OSD Lyrics 并添加自定义歌词源
+          favicon-api
         
       </div>
     </a>
   
   
-    <a href="/196/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">OpenWrt Hotplug脚本 + Dnspod api 实现ms级延迟的DDNS记录更新</div>
+    <a href="/posts/126/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">网易云音乐API php示例</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -482,11 +517,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">php</a>
+                <a href="javascript:void(0)" class="js-tag color3">其他</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">其他</a>
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
               </li>
              
               <li class="article-tag-list-item">
