@@ -9,7 +9,7 @@
   <title>foobar2000 ESLyric 网易云音乐 歌词脚本 ver.0.0.2 | EH5</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="网易云音乐Eslyric歌词插件v.0.0.1 最先发布在了百度 foobar2000吧,现在放到这 由于不了解js,爬虫是用php写的,放在我自己服务器上,js是Jeannela制作的天天动听改的…..网易云音乐的歌蛮全的,歌词基本上都有 需要foobar2000播放器和ESLyric插件 (下载) 脚本添加方式为: 文件-参数设置-工具-ESLyric-搜索-添加-工具-导入 仅作留念 htt">
-<meta name="keywords" content="web,api,网易云音乐,foobar2000,接口,歌词">
+<meta name="keywords" content="api,foobar2000,web,接口,歌词,网易云音乐">
 <meta property="og:type" content="article">
 <meta property="og:title" content="foobar2000 ESLyric 网易云音乐 歌词脚本 ver.0.0.2">
 <meta property="og:url" content="http://eh5.me/posts/33/index.html">
@@ -148,38 +148,42 @@
             
 <script src="https://gitcdn.xyz/repo/imsun/gitment/gh-pages/dist/gitment.browser.js"></script>
 <script>
-  (function() {
-    var gitm_css = document.createElement('link'); gitm_css.rel="stylesheet"; gitm_css.async = true;
+  (function () {
+    var gitm_css = document.createElement('link');
+    gitm_css.rel = "stylesheet";
+    gitm_css.async = true;
     gitm_css.href = "https://gitcdn.xyz/repo/imsun/gitment/gh-pages/style/default.css";
     (document.getElementsByTagName('head')[0]).appendChild(gitm_css);
-//    var gitm = document.createElement('script'); gitm.type = 'text/javascript'; gitm.async = false;
-//    gitm.src = "https://gitcdn.xyz/repo/imsun/gitment/gh-pages/dist/gitment.browser.js";
-//    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gitm);
+    var gitm = document.createElement('style');
+    gitm.innerHTML = '.gitment-comment-main,.gitment-markdown {background-color: white}';
+    (document.getElementsByTagName('head')[0]).appendChild(gitm);
   })();
 </script>
 
 
-<article id="post-33" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-33"
+         class="article article-type-post " itemscope
+         itemprop="blogPost">
   <div class="article-inner">
     
-      <header class="article-header">
-        
+    <header class="article-header">
+      
   
     <h1 class="article-title" itemprop="name">
       foobar2000 ESLyric 网易云音乐 歌词脚本 ver.0.0.2
     </h1>
   
 
-        
-        <a href="/posts/33/" class="archive-article-date">
+      
+      <a href="/posts/33/" class="archive-article-date">
   	<time datetime="2016-07-31T02:19:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-31</time>
 </a>
-        
-      </header>
+      
+    </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://tieba.baidu.com/p/4651402375?pid=93206818274&amp;cid=0#93206818274" target="_blank" rel="external">网易云音乐Eslyric歌词插件v.0.0.1</a></p>
+      <p><a href="http://tieba.baidu.com/p/4651402375?pid=93206818274&amp;cid=0#93206818274" target="_blank" rel="external">网易云音乐Eslyric歌词插件v.0.0.1</a></p>
 <p>最先发布在了百度 foobar2000吧,现在放到这</p>
 <p>由于不了解js,爬虫是用php写的,放在我自己服务器上,js是Jeannela制作的天天动听改的…..网易云音乐的歌蛮全的,歌词基本上都有</p>
 <p>需要foobar2000播放器和ESLyric插件 (<a href="http://blog.sina.com.cn/go2spa" target="_blank" rel="external">下载</a>)</p>
@@ -200,19 +204,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">web</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">api</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">网易云音乐</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">foobar2000</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">foobar2000</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">web</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -221,6 +221,10 @@
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">歌词</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">网易云音乐</a>
         		</li>
       		
 		</ul>
@@ -250,7 +254,7 @@
       
 
       
-        
+      
 <div class="share-btn share-icons tooltip-left">
   <div class="tooltip tooltip-east">
     <span class="tooltip-item">
@@ -306,7 +310,7 @@
   </div>
 </article>
 
-  
+
 <nav id="article-nav">
   
     <a href="/posts/100/" id="article-nav-newer" class="article-nav-link-wrap">
@@ -345,32 +349,26 @@
 
 
 
-  
 
-  
 
-  
+<section id="comments">
+  <div id="gitment"></div>
+  <script>
+    var gitment = new Gitment({
+      id: location.pathname, // 可选。默认为 location.href
+      owner: 'EHfive',
+      repo: 'eh5.me',
+      oauth: {
+        client_id: '57ce52bed52e8561ce77',
+        client_secret: '9324c3f263ab7cfc32fc3d45bac691f462830468',
+      },
+    })
+    gitment.render('gitment')
+  </script>
+  <noscript>Please enable JavaScript to view the comments powered by Gitment.</noscript>
+</section>
 
-  
-    <section id="comments">
-      <div id="gitment"></div>
-      <script>
-        var gitment = new Gitment({
-          id: location.pathname, // 可选。默认为 location.href
-          owner: 'EHfive',
-          repo: 'eh5.me',
-          oauth: {
-            client_id: '57ce52bed52e8561ce77',
-            client_secret: '9324c3f263ab7cfc32fc3d45bac691f462830468',
-          },
-        })
-        gitment.render('gitment')
-      </script>
-      <noscript>Please enable JavaScript to view the comments powered by Gitment.</noscript>
-    </section>
-  
 
-  
 
 
 
@@ -456,30 +454,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">公告</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">网站</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">GPA</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">web</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">江苏科技大学</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">绩点</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">其他</a>
               </li>
              
@@ -488,15 +462,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">php</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">网易云音乐</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">foobar2000</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">web</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -509,6 +479,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">歌词</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">网易云音乐</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -533,6 +511,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">sif</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">公告</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">网站</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">GPA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">江苏科技大学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">绩点</a>
               </li>
             
             <div class="clearfix"></div>

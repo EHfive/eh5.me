@@ -9,7 +9,7 @@
   <title>网易云音乐API php示例 | EH5</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="如下">
-<meta name="keywords" content="api,php,网易云音乐">
+<meta name="keywords" content="api,网易云音乐,php">
 <meta property="og:type" content="article">
 <meta property="og:title" content="网易云音乐API php示例">
 <meta property="og:url" content="http://eh5.me/posts/126/index.html">
@@ -148,38 +148,42 @@
             
 <script src="https://gitcdn.xyz/repo/imsun/gitment/gh-pages/dist/gitment.browser.js"></script>
 <script>
-  (function() {
-    var gitm_css = document.createElement('link'); gitm_css.rel="stylesheet"; gitm_css.async = true;
+  (function () {
+    var gitm_css = document.createElement('link');
+    gitm_css.rel = "stylesheet";
+    gitm_css.async = true;
     gitm_css.href = "https://gitcdn.xyz/repo/imsun/gitment/gh-pages/style/default.css";
     (document.getElementsByTagName('head')[0]).appendChild(gitm_css);
-//    var gitm = document.createElement('script'); gitm.type = 'text/javascript'; gitm.async = false;
-//    gitm.src = "https://gitcdn.xyz/repo/imsun/gitment/gh-pages/dist/gitment.browser.js";
-//    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gitm);
+    var gitm = document.createElement('style');
+    gitm.innerHTML = '.gitment-comment-main,.gitment-markdown {background-color: white}';
+    (document.getElementsByTagName('head')[0]).appendChild(gitm);
   })();
 </script>
 
 
-<article id="post-126" class="article article-type-post " itemscope itemprop="blogPost">
+<article id="post-126"
+         class="article article-type-post " itemscope
+         itemprop="blogPost">
   <div class="article-inner">
     
-      <header class="article-header">
-        
+    <header class="article-header">
+      
   
     <h1 class="article-title" itemprop="name">
       网易云音乐API php示例
     </h1>
   
 
-        
-        <a href="/posts/126/" class="archive-article-date">
+      
+      <a href="/posts/126/" class="archive-article-date">
   	<time datetime="2016-08-29T10:31:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-29</time>
 </a>
-        
-      </header>
+      
+    </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>如下<br><a id="more"></a><br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div></pre></td><td class="code"><pre><div class="line">header(<span class="string">"Content-type:application/json;charset=utf-8"</span>);</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">curl_get</span><span class="params">($url)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    $refer = <span class="string">"http://music.163.com/"</span>;</div><div class="line">    $header[] = <span class="string">"Cookie: "</span> . <span class="string">"appver=1.5.0.75771;"</span>;</div><div class="line">    $ch = curl_init();</div><div class="line">    curl_setopt($ch, CURLOPT_URL, $url);</div><div class="line">    curl_setopt($ch, CURLOPT_HTTPHEADER, $header);</div><div class="line">    curl_setopt($ch, CURLOPT_RETURNTRANSFER, <span class="keyword">true</span>);</div><div class="line">    curl_setopt($ch, CURLOPT_BINARYTRANSFER, <span class="keyword">true</span>);</div><div class="line">    curl_setopt($ch, CURLOPT_REFERER, $refer);</div><div class="line">    $output = curl_exec($ch);</div><div class="line">    curl_close($ch);</div><div class="line">    <span class="keyword">return</span> $output;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">music_search</span><span class="params">($s,$type=<span class="number">1</span>, $limit=<span class="number">1</span>)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line"></div><div class="line">    $type||$type=<span class="number">1</span>;$limit||$limit=<span class="number">1</span>;</div><div class="line">    $url= <span class="string">"http://music.163.com/api/search/get/web?csrf_token="</span>;</div><div class="line">    $curl = curl_init();</div><div class="line">    $post_data = <span class="string">"hlpretag=&lt;span class="</span>s-fc7<span class="string">"&gt;&amp;hlposttag=&lt;/span&gt;&amp;s="</span>. $s . <span class="string">"&amp;type="</span>.$type.<span class="string">"&amp;offset=0&amp;total=true&amp;limit="</span> . $limit;</div><div class="line">    curl_setopt($curl, CURLOPT_URL,$url);</div><div class="line">    curl_setopt($curl, CURLOPT_RETURNTRANSFER,<span class="number">1</span>);</div><div class="line"></div><div class="line">    $header =<span class="keyword">array</span>(</div><div class="line">        <span class="string">"Host: music.163.com"</span>,</div><div class="line">        <span class="string">"Origin: http://music.163.com"</span>,</div><div class="line">        <span class="string">"User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"</span>,</div><div class="line">        <span class="string">"Content-Type: application/x-www-form-urlencoded"</span>,</div><div class="line">        <span class="string">"Referer: http://music.163.com/search/"</span>,</div><div class="line">    );</div><div class="line"></div><div class="line">    curl_setopt($curl, CURLOPT_HTTPHEADER, $header);</div><div class="line"></div><div class="line">    curl_setopt($curl, CURLOPT_POST, <span class="number">1</span>);</div><div class="line">    curl_setopt($curl, CURLOPT_POSTFIELDS, $post_data);</div><div class="line">    $src = curl_exec($curl);</div><div class="line">    curl_close($curl);</div><div class="line">    <span class="keyword">return</span> $src;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_music_info</span><span class="params">($music_id)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    $url = <span class="string">"http://music.163.com/api/song/detail/?id="</span> . $music_id . <span class="string">"&amp;ids=%5B"</span> . $music_id . <span class="string">"%5D"</span>;</div><div class="line">    <span class="keyword">return</span> curl_get($url);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_artist_album</span><span class="params">($artist_id, $limit)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    $url = <span class="string">"http://music.163.com/api/artist/albums/"</span> . $artist_id . <span class="string">"?limit="</span> . $limit;</div><div class="line">    <span class="keyword">return</span> curl_get($url);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_album_info</span><span class="params">($album_id)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    $url = <span class="string">"http://music.163.com/api/album/"</span> . $album_id;</div><div class="line">    <span class="keyword">return</span> curl_get($url);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_playlist_info</span><span class="params">($playlist_id)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    $url = <span class="string">"http://music.163.com/api/playlist/detail?id="</span> . $playlist_id;</div><div class="line">    <span class="keyword">return</span> curl_get($url);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_music_lyric</span><span class="params">($music_id)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    $url = <span class="string">"http://music.163.com/api/song/lyric?os=pc&amp;id="</span> . $music_id . <span class="string">"&amp;lv=-1&amp;kv=-1&amp;tv=-1"</span>;</div><div class="line">    <span class="keyword">return</span> curl_get($url);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_mv_info</span><span class="params">($mv_id)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    $url = <span class="string">"http://music.163.com/api/mv/detail?id=$mv_id&amp;type=mp4"</span>;</div><div class="line">    <span class="keyword">return</span> curl_get($url);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getg</span><span class="params">($get)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(!is_string($get)) <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    $res=<span class="keyword">isset</span>($_GET[$get])?$_GET[$get]:<span class="keyword">false</span>;</div><div class="line">    <span class="keyword">return</span> $res;</div><div class="line">&#125;</div><div class="line">$type = [<span class="string">'song'</span>=&gt;<span class="number">1</span>,<span class="string">'artist'</span>=&gt;<span class="number">100</span>,<span class="string">'album'</span>=&gt;<span class="number">10</span>,<span class="string">'mv'</span>=&gt;<span class="number">1004</span>,<span class="string">'lyric'</span>=&gt;<span class="number">1006</span>,<span class="string">'playlist'</span>=&gt;<span class="number">1000</span>,<span class="string">'radio'</span>=&gt;<span class="number">1009</span>,<span class="string">'user'</span>=&gt;<span class="number">1006</span>];</div><div class="line"><span class="keyword">switch</span>(getg(<span class="string">"t"</span>))&#123;</div><div class="line">    <span class="keyword">case</span> <span class="string">"search"</span>:<span class="keyword">echo</span> music_search(getg(<span class="string">"s"</span>),$type[getg(<span class="string">'type'</span>)],getg(<span class="string">"limit"</span>));<span class="keyword">break</span>;</div><div class="line">    <span class="keyword">case</span> <span class="string">"music_info"</span>:<span class="keyword">echo</span> get_music_info(getg(<span class="string">"id"</span>));<span class="keyword">break</span>;</div><div class="line">    <span class="keyword">case</span> <span class="string">"music_lyric"</span>:<span class="keyword">echo</span> get_music_lyric(getg(<span class="string">"id"</span>));<span class="keyword">break</span>;</div><div class="line">    <span class="keyword">case</span> <span class="string">"artist_album"</span>:<span class="keyword">echo</span> get_artist_album(getg(<span class="string">"id"</span>),getg(<span class="string">"limit"</span>));<span class="keyword">break</span>;</div><div class="line">    <span class="keyword">case</span> <span class="string">"album_info"</span>:<span class="keyword">echo</span> get_album_info(getg(<span class="string">"id"</span>));<span class="keyword">break</span>;</div><div class="line">    <span class="keyword">case</span> <span class="string">"playlist_info"</span>:<span class="keyword">echo</span> get_playlist_info(getg(<span class="string">"id"</span>));<span class="keyword">break</span>;</div><div class="line">    <span class="keyword">case</span> <span class="string">"mv_info"</span>:<span class="keyword">echo</span> get_mv_info(getg(<span class="string">"id"</span>));<span class="keyword">break</span>;</div><div class="line">    <span class="keyword">default</span> :<span class="keyword">echo</span> <span class="string">"&#123;"</span>code<span class="string">":400&#125;"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+      <p>如下<br><a id="more"></a><br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div></pre></td><td class="code"><pre><div class="line">header(<span class="string">"Content-type:application/json;charset=utf-8"</span>);</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">curl_get</span><span class="params">($url)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    $refer = <span class="string">"http://music.163.com/"</span>;</div><div class="line">    $header[] = <span class="string">"Cookie: "</span> . <span class="string">"appver=1.5.0.75771;"</span>;</div><div class="line">    $ch = curl_init();</div><div class="line">    curl_setopt($ch, CURLOPT_URL, $url);</div><div class="line">    curl_setopt($ch, CURLOPT_HTTPHEADER, $header);</div><div class="line">    curl_setopt($ch, CURLOPT_RETURNTRANSFER, <span class="keyword">true</span>);</div><div class="line">    curl_setopt($ch, CURLOPT_BINARYTRANSFER, <span class="keyword">true</span>);</div><div class="line">    curl_setopt($ch, CURLOPT_REFERER, $refer);</div><div class="line">    $output = curl_exec($ch);</div><div class="line">    curl_close($ch);</div><div class="line">    <span class="keyword">return</span> $output;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">music_search</span><span class="params">($s,$type=<span class="number">1</span>, $limit=<span class="number">1</span>)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line"></div><div class="line">    $type||$type=<span class="number">1</span>;$limit||$limit=<span class="number">1</span>;</div><div class="line">    $url= <span class="string">"http://music.163.com/api/search/get/web?csrf_token="</span>;</div><div class="line">    $curl = curl_init();</div><div class="line">    $post_data = <span class="string">"hlpretag=&lt;span class="</span>s-fc7<span class="string">"&gt;&amp;hlposttag=&lt;/span&gt;&amp;s="</span>. $s . <span class="string">"&amp;type="</span>.$type.<span class="string">"&amp;offset=0&amp;total=true&amp;limit="</span> . $limit;</div><div class="line">    curl_setopt($curl, CURLOPT_URL,$url);</div><div class="line">    curl_setopt($curl, CURLOPT_RETURNTRANSFER,<span class="number">1</span>);</div><div class="line"></div><div class="line">    $header =<span class="keyword">array</span>(</div><div class="line">        <span class="string">"Host: music.163.com"</span>,</div><div class="line">        <span class="string">"Origin: http://music.163.com"</span>,</div><div class="line">        <span class="string">"User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"</span>,</div><div class="line">        <span class="string">"Content-Type: application/x-www-form-urlencoded"</span>,</div><div class="line">        <span class="string">"Referer: http://music.163.com/search/"</span>,</div><div class="line">    );</div><div class="line"></div><div class="line">    curl_setopt($curl, CURLOPT_HTTPHEADER, $header);</div><div class="line"></div><div class="line">    curl_setopt($curl, CURLOPT_POST, <span class="number">1</span>);</div><div class="line">    curl_setopt($curl, CURLOPT_POSTFIELDS, $post_data);</div><div class="line">    $src = curl_exec($curl);</div><div class="line">    curl_close($curl);</div><div class="line">    <span class="keyword">return</span> $src;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_music_info</span><span class="params">($music_id)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    $url = <span class="string">"http://music.163.com/api/song/detail/?id="</span> . $music_id . <span class="string">"&amp;ids=%5B"</span> . $music_id . <span class="string">"%5D"</span>;</div><div class="line">    <span class="keyword">return</span> curl_get($url);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_artist_album</span><span class="params">($artist_id, $limit)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    $url = <span class="string">"http://music.163.com/api/artist/albums/"</span> . $artist_id . <span class="string">"?limit="</span> . $limit;</div><div class="line">    <span class="keyword">return</span> curl_get($url);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_album_info</span><span class="params">($album_id)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    $url = <span class="string">"http://music.163.com/api/album/"</span> . $album_id;</div><div class="line">    <span class="keyword">return</span> curl_get($url);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_playlist_info</span><span class="params">($playlist_id)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    $url = <span class="string">"http://music.163.com/api/playlist/detail?id="</span> . $playlist_id;</div><div class="line">    <span class="keyword">return</span> curl_get($url);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_music_lyric</span><span class="params">($music_id)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    $url = <span class="string">"http://music.163.com/api/song/lyric?os=pc&amp;id="</span> . $music_id . <span class="string">"&amp;lv=-1&amp;kv=-1&amp;tv=-1"</span>;</div><div class="line">    <span class="keyword">return</span> curl_get($url);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">get_mv_info</span><span class="params">($mv_id)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    $url = <span class="string">"http://music.163.com/api/mv/detail?id=$mv_id&amp;type=mp4"</span>;</div><div class="line">    <span class="keyword">return</span> curl_get($url);</div><div class="line">&#125;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getg</span><span class="params">($get)</span></span>&#123;</div><div class="line">    <span class="keyword">if</span>(!is_string($get)) <span class="keyword">return</span> <span class="keyword">false</span>;</div><div class="line">    $res=<span class="keyword">isset</span>($_GET[$get])?$_GET[$get]:<span class="keyword">false</span>;</div><div class="line">    <span class="keyword">return</span> $res;</div><div class="line">&#125;</div><div class="line">$type = [<span class="string">'song'</span>=&gt;<span class="number">1</span>,<span class="string">'artist'</span>=&gt;<span class="number">100</span>,<span class="string">'album'</span>=&gt;<span class="number">10</span>,<span class="string">'mv'</span>=&gt;<span class="number">1004</span>,<span class="string">'lyric'</span>=&gt;<span class="number">1006</span>,<span class="string">'playlist'</span>=&gt;<span class="number">1000</span>,<span class="string">'radio'</span>=&gt;<span class="number">1009</span>,<span class="string">'user'</span>=&gt;<span class="number">1006</span>];</div><div class="line"><span class="keyword">switch</span>(getg(<span class="string">"t"</span>))&#123;</div><div class="line">    <span class="keyword">case</span> <span class="string">"search"</span>:<span class="keyword">echo</span> music_search(getg(<span class="string">"s"</span>),$type[getg(<span class="string">'type'</span>)],getg(<span class="string">"limit"</span>));<span class="keyword">break</span>;</div><div class="line">    <span class="keyword">case</span> <span class="string">"music_info"</span>:<span class="keyword">echo</span> get_music_info(getg(<span class="string">"id"</span>));<span class="keyword">break</span>;</div><div class="line">    <span class="keyword">case</span> <span class="string">"music_lyric"</span>:<span class="keyword">echo</span> get_music_lyric(getg(<span class="string">"id"</span>));<span class="keyword">break</span>;</div><div class="line">    <span class="keyword">case</span> <span class="string">"artist_album"</span>:<span class="keyword">echo</span> get_artist_album(getg(<span class="string">"id"</span>),getg(<span class="string">"limit"</span>));<span class="keyword">break</span>;</div><div class="line">    <span class="keyword">case</span> <span class="string">"album_info"</span>:<span class="keyword">echo</span> get_album_info(getg(<span class="string">"id"</span>));<span class="keyword">break</span>;</div><div class="line">    <span class="keyword">case</span> <span class="string">"playlist_info"</span>:<span class="keyword">echo</span> get_playlist_info(getg(<span class="string">"id"</span>));<span class="keyword">break</span>;</div><div class="line">    <span class="keyword">case</span> <span class="string">"mv_info"</span>:<span class="keyword">echo</span> get_mv_info(getg(<span class="string">"id"</span>));<span class="keyword">break</span>;</div><div class="line">    <span class="keyword">default</span> :<span class="keyword">echo</span> <span class="string">"&#123;"</span>code<span class="string">":400&#125;"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>调用方法为get //…/scriptname.php</p>
 <p>返回文本json</p>
 <table>
@@ -237,11 +241,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">网易云音乐</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">网易云音乐</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
         		</li>
       		
 		</ul>
@@ -267,7 +271,7 @@
       
 
       
-        
+      
 <div class="share-btn share-icons tooltip-left">
   <div class="tooltip tooltip-east">
     <span class="tooltip-item">
@@ -323,7 +327,7 @@
   </div>
 </article>
 
-  
+
 <nav id="article-nav">
   
     <a href="/posts/196/" id="article-nav-newer" class="article-nav-link-wrap">
@@ -362,32 +366,26 @@
 
 
 
-  
 
-  
 
-  
+<section id="comments">
+  <div id="gitment"></div>
+  <script>
+    var gitment = new Gitment({
+      id: location.pathname, // 可选。默认为 location.href
+      owner: 'EHfive',
+      repo: 'eh5.me',
+      oauth: {
+        client_id: '57ce52bed52e8561ce77',
+        client_secret: '9324c3f263ab7cfc32fc3d45bac691f462830468',
+      },
+    })
+    gitment.render('gitment')
+  </script>
+  <noscript>Please enable JavaScript to view the comments powered by Gitment.</noscript>
+</section>
 
-  
-    <section id="comments">
-      <div id="gitment"></div>
-      <script>
-        var gitment = new Gitment({
-          id: location.pathname, // 可选。默认为 location.href
-          owner: 'EHfive',
-          repo: 'eh5.me',
-          oauth: {
-            client_id: '57ce52bed52e8561ce77',
-            client_secret: '9324c3f263ab7cfc32fc3d45bac691f462830468',
-          },
-        })
-        gitment.render('gitment')
-      </script>
-      <noscript>Please enable JavaScript to view the comments powered by Gitment.</noscript>
-    </section>
-  
 
-  
 
 
 
@@ -473,30 +471,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">公告</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">网站</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">GPA</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">web</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">江苏科技大学</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">绩点</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">其他</a>
               </li>
              
@@ -505,15 +479,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">php</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">网易云音乐</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">foobar2000</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">web</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -526,6 +496,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">歌词</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">网易云音乐</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -550,6 +528,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">sif</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">公告</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">网站</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">GPA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">江苏科技大学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">绩点</a>
               </li>
             
             <div class="clearfix"></div>

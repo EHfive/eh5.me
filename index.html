@@ -148,38 +148,42 @@
     
 <script src="https://gitcdn.xyz/repo/imsun/gitment/gh-pages/dist/gitment.browser.js"></script>
 <script>
-  (function() {
-    var gitm_css = document.createElement('link'); gitm_css.rel="stylesheet"; gitm_css.async = true;
+  (function () {
+    var gitm_css = document.createElement('link');
+    gitm_css.rel = "stylesheet";
+    gitm_css.async = true;
     gitm_css.href = "https://gitcdn.xyz/repo/imsun/gitment/gh-pages/style/default.css";
     (document.getElementsByTagName('head')[0]).appendChild(gitm_css);
-//    var gitm = document.createElement('script'); gitm.type = 'text/javascript'; gitm.async = false;
-//    gitm.src = "https://gitcdn.xyz/repo/imsun/gitment/gh-pages/dist/gitment.browser.js";
-//    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gitm);
+    var gitm = document.createElement('style');
+    gitm.innerHTML = '.gitment-comment-main,.gitment-markdown {background-color: white}';
+    (document.getElementsByTagName('head')[0]).appendChild(gitm);
   })();
 </script>
 
 
-<article id="post-llsif" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-llsif"
+         class="article article-type-post  article-index" itemscope
+         itemprop="blogPost">
   <div class="article-inner">
     
-      <header class="article-header">
-        
+    <header class="article-header">
+      
   
     <h1 itemprop="name">
       <a class="article-title" href="/posts/llsif/">LoveLive SIF 抽卡成功率计算</a>
     </h1>
   
 
-        
-        <a href="/posts/llsif/" class="archive-article-date">
+      
+      <a href="/posts/llsif/" class="archive-article-date">
   	<time datetime="2017-03-18T14:30:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-18</time>
 </a>
-        
-      </header>
+      
+    </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="https://llsif.sokka.cn/" target="_blank" rel="external">https://llsif.sokka.cn/</a></p>
+      <p><a href="https://llsif.sokka.cn/" target="_blank" rel="external">https://llsif.sokka.cn/</a></p>
 <p>4.0后回归国服,</p>
 <p>用着LLhelper , dash.moe</p>
 <p>想着总不能什么都不做吧</p>
@@ -222,9 +226,9 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/posts/llsif/">展开全文 >></a>
-        </p>
+      <p class="article-more-link">
+        <a class="article-more-a" href="/posts/llsif/">展开全文 >></a>
+      </p>
       
 
       
@@ -250,49 +254,51 @@
 </aside>
 
 
-
-
   
     
 <script src="https://gitcdn.xyz/repo/imsun/gitment/gh-pages/dist/gitment.browser.js"></script>
 <script>
-  (function() {
-    var gitm_css = document.createElement('link'); gitm_css.rel="stylesheet"; gitm_css.async = true;
+  (function () {
+    var gitm_css = document.createElement('link');
+    gitm_css.rel = "stylesheet";
+    gitm_css.async = true;
     gitm_css.href = "https://gitcdn.xyz/repo/imsun/gitment/gh-pages/style/default.css";
     (document.getElementsByTagName('head')[0]).appendChild(gitm_css);
-//    var gitm = document.createElement('script'); gitm.type = 'text/javascript'; gitm.async = false;
-//    gitm.src = "https://gitcdn.xyz/repo/imsun/gitment/gh-pages/dist/gitment.browser.js";
-//    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gitm);
+    var gitm = document.createElement('style');
+    gitm.innerHTML = '.gitment-comment-main,.gitment-markdown {background-color: white}';
+    (document.getElementsByTagName('head')[0]).appendChild(gitm);
   })();
 </script>
 
 
-<article id="post-OSD-Lyrics" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-OSD-Lyrics"
+         class="article article-type-post  article-index" itemscope
+         itemprop="blogPost">
   <div class="article-inner">
     
-      <header class="article-header">
-        
+    <header class="article-header">
+      
   
     <h1 itemprop="name">
       <a class="article-title" href="/posts/OSD-Lyrics/">Ubuntu 下安装 OSD Lyrics 并添加自定义歌词源</a>
     </h1>
   
 
-        
-        <a href="/posts/OSD-Lyrics/" class="archive-article-date">
+      
+      <a href="/posts/OSD-Lyrics/" class="archive-article-date">
   	<time datetime="2017-02-21T10:18:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-21</time>
 </a>
-        
-      </header>
+      
+    </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install git</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash">安装编译依赖包,及之后运行依赖包</span></div><div class="line"></div><div class="line">sudo apt-get install dh-autoreconf libnotify-dev libsqlite3-0-dbg libgtk2.0-dev libglib2.0-dev libdbus-glib-1-dev libcurl4-openssl-dev libssl-dev intltool</div><div class="line">sudo pip2 install pycurl</div></pre></td></tr></table></figure>
+      <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install git</div><div class="line"></div><div class="line"><span class="meta">#</span><span class="bash">安装编译依赖包,及之后运行依赖包</span></div><div class="line"></div><div class="line">sudo apt-get install dh-autoreconf libnotify-dev libsqlite3-0-dbg libgtk2.0-dev libglib2.0-dev libdbus-glib-1-dev libcurl4-openssl-dev libssl-dev intltool</div><div class="line">sudo pip2 install pycurl</div></pre></td></tr></table></figure>
 <p>….</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta"> #</span><span class="bash">编译安装</span></div><div class="line"></div><div class="line">git clone git@github.com:osdlyrics/osdlyrics.git</div><div class="line">cd osdlyrics/</div><div class="line">./autogen.sh</div><div class="line">make</div><div class="line">sudo make install</div><div class="line">[/shell]</div></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/posts/OSD-Lyrics/#more">more >></a>
-        
+      
+      <a class="article-more-a" href="/posts/OSD-Lyrics/#more">more >></a>
+      
       
 
       
@@ -329,9 +335,9 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/posts/OSD-Lyrics/">展开全文 >></a>
-        </p>
+      <p class="article-more-link">
+        <a class="article-more-a" href="/posts/OSD-Lyrics/">展开全文 >></a>
+      </p>
       
 
       
@@ -357,44 +363,46 @@
 </aside>
 
 
-
-
   
     
 <script src="https://gitcdn.xyz/repo/imsun/gitment/gh-pages/dist/gitment.browser.js"></script>
 <script>
-  (function() {
-    var gitm_css = document.createElement('link'); gitm_css.rel="stylesheet"; gitm_css.async = true;
+  (function () {
+    var gitm_css = document.createElement('link');
+    gitm_css.rel = "stylesheet";
+    gitm_css.async = true;
     gitm_css.href = "https://gitcdn.xyz/repo/imsun/gitment/gh-pages/style/default.css";
     (document.getElementsByTagName('head')[0]).appendChild(gitm_css);
-//    var gitm = document.createElement('script'); gitm.type = 'text/javascript'; gitm.async = false;
-//    gitm.src = "https://gitcdn.xyz/repo/imsun/gitment/gh-pages/dist/gitment.browser.js";
-//    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gitm);
+    var gitm = document.createElement('style');
+    gitm.innerHTML = '.gitment-comment-main,.gitment-markdown {background-color: white}';
+    (document.getElementsByTagName('head')[0]).appendChild(gitm);
   })();
 </script>
 
 
-<article id="post-favicon-api" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-favicon-api"
+         class="article article-type-post  article-index" itemscope
+         itemprop="blogPost">
   <div class="article-inner">
     
-      <header class="article-header">
-        
+    <header class="article-header">
+      
   
     <h1 itemprop="name">
       <a class="article-title" href="/posts/favicon-api/">favicon-api</a>
     </h1>
   
 
-        
-        <a href="/posts/favicon-api/" class="archive-article-date">
+      
+      <a href="/posts/favicon-api/" class="archive-article-date">
   	<time datetime="2017-02-18T15:31:58.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-18</time>
 </a>
-        
-      </header>
+      
+    </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote><p><a href="https://mcht.wicp.net/api/favicon/index.php?url0=" target="_blank" rel="external">https://mcht.wicp.net/api/favicon/index.php?url0=</a>&lt; 网站主页链接 &gt;[&amp;update=1]</p>
+      <blockquote><p><a href="https://mcht.wicp.net/api/favicon/index.php?url0=" target="_blank" rel="external">https://mcht.wicp.net/api/favicon/index.php?url0=</a>&lt; 网站主页链接 &gt;[&amp;update=1]</p>
 </blockquote>
 <p>输出favicon的文本链接</p>
 <p>获取favicon链接后默认最少缓存15天,加快再次获取favicon速度,之后再次访问更新缓存</p>
@@ -447,9 +455,9 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/posts/favicon-api/">展开全文 >></a>
-        </p>
+      <p class="article-more-link">
+        <a class="article-more-a" href="/posts/favicon-api/">展开全文 >></a>
+      </p>
       
 
       
@@ -475,44 +483,46 @@
 </aside>
 
 
-
-
   
     
 <script src="https://gitcdn.xyz/repo/imsun/gitment/gh-pages/dist/gitment.browser.js"></script>
 <script>
-  (function() {
-    var gitm_css = document.createElement('link'); gitm_css.rel="stylesheet"; gitm_css.async = true;
+  (function () {
+    var gitm_css = document.createElement('link');
+    gitm_css.rel = "stylesheet";
+    gitm_css.async = true;
     gitm_css.href = "https://gitcdn.xyz/repo/imsun/gitment/gh-pages/style/default.css";
     (document.getElementsByTagName('head')[0]).appendChild(gitm_css);
-//    var gitm = document.createElement('script'); gitm.type = 'text/javascript'; gitm.async = false;
-//    gitm.src = "https://gitcdn.xyz/repo/imsun/gitment/gh-pages/dist/gitment.browser.js";
-//    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gitm);
+    var gitm = document.createElement('style');
+    gitm.innerHTML = '.gitment-comment-main,.gitment-markdown {background-color: white}';
+    (document.getElementsByTagName('head')[0]).appendChild(gitm);
   })();
 </script>
 
 
-<article id="post-196" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-196"
+         class="article article-type-post  article-index" itemscope
+         itemprop="blogPost">
   <div class="article-inner">
     
-      <header class="article-header">
-        
+    <header class="article-header">
+      
   
     <h1 itemprop="name">
       <a class="article-title" href="/posts/196/">OpenWrt Hotplug脚本 + Dnspod api 实现ms级延迟的DDNS记录更新</a>
     </h1>
   
 
-        
-        <a href="/posts/196/" class="archive-article-date">
+      
+      <a href="/posts/196/" class="archive-article-date">
   	<time datetime="2016-09-04T04:47:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-09-04</time>
 </a>
-        
-      </header>
+      
+    </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>一般的话,实现DDNS就是直接使用openwrt的DDNS插件,如下图</p>
+      <p>一般的话,实现DDNS就是直接使用openwrt的DDNS插件,如下图</p>
 <p><img src="http://mcht.wicp.net/pic/DDNS/ddns%E6%8F%92%E4%BB%B6.png" alt=""></p>
 <p>这里介绍一个更简便快速的方法</p>
 <h3 id="OpenWrt中的Hotplug脚本"><a href="#OpenWrt中的Hotplug脚本" class="headerlink" title="OpenWrt中的Hotplug脚本"></a>OpenWrt中的Hotplug脚本</h3><p>Hotplug，直译就是热插拔。在OpenWrt中，无论何时一个设备从系统中增删，都产生一个&ldquo;热插拔事件&rdquo;。</p>
@@ -541,9 +551,9 @@
 </tbody>
 </table>
 <p>利用hotplug脚本可以在网络接口启动或关闭时执行相应的动作</p>
-        
-          <a class="article-more-a" href="/posts/196/#more">more >></a>
-        
+      
+      <a class="article-more-a" href="/posts/196/#more">more >></a>
+      
       
 
       
@@ -569,9 +579,9 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/posts/196/">展开全文 >></a>
-        </p>
+      <p class="article-more-link">
+        <a class="article-more-a" href="/posts/196/">展开全文 >></a>
+      </p>
       
 
       
@@ -597,47 +607,49 @@
 </aside>
 
 
-
-
   
     
 <script src="https://gitcdn.xyz/repo/imsun/gitment/gh-pages/dist/gitment.browser.js"></script>
 <script>
-  (function() {
-    var gitm_css = document.createElement('link'); gitm_css.rel="stylesheet"; gitm_css.async = true;
+  (function () {
+    var gitm_css = document.createElement('link');
+    gitm_css.rel = "stylesheet";
+    gitm_css.async = true;
     gitm_css.href = "https://gitcdn.xyz/repo/imsun/gitment/gh-pages/style/default.css";
     (document.getElementsByTagName('head')[0]).appendChild(gitm_css);
-//    var gitm = document.createElement('script'); gitm.type = 'text/javascript'; gitm.async = false;
-//    gitm.src = "https://gitcdn.xyz/repo/imsun/gitment/gh-pages/dist/gitment.browser.js";
-//    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gitm);
+    var gitm = document.createElement('style');
+    gitm.innerHTML = '.gitment-comment-main,.gitment-markdown {background-color: white}';
+    (document.getElementsByTagName('head')[0]).appendChild(gitm);
   })();
 </script>
 
 
-<article id="post-126" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-126"
+         class="article article-type-post  article-index" itemscope
+         itemprop="blogPost">
   <div class="article-inner">
     
-      <header class="article-header">
-        
+    <header class="article-header">
+      
   
     <h1 itemprop="name">
       <a class="article-title" href="/posts/126/">网易云音乐API php示例</a>
     </h1>
   
 
-        
-        <a href="/posts/126/" class="archive-article-date">
+      
+      <a href="/posts/126/" class="archive-article-date">
   	<time datetime="2016-08-29T10:31:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-29</time>
 </a>
-        
-      </header>
+      
+    </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>如下<br>
-        
-          <a class="article-more-a" href="/posts/126/#more">more >></a>
-        
+      <p>如下<br>
+      
+      <a class="article-more-a" href="/posts/126/#more">more >></a>
+      
       
 
       
@@ -654,11 +666,11 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">网易云音乐</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">网易云音乐</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
         		</li>
       		
 		</ul>
@@ -682,9 +694,9 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/posts/126/">展开全文 >></a>
-        </p>
+      <p class="article-more-link">
+        <a class="article-more-a" href="/posts/126/">展开全文 >></a>
+      </p>
       
 
       
@@ -710,52 +722,54 @@
 </aside>
 
 
-
-
   
     
 <script src="https://gitcdn.xyz/repo/imsun/gitment/gh-pages/dist/gitment.browser.js"></script>
 <script>
-  (function() {
-    var gitm_css = document.createElement('link'); gitm_css.rel="stylesheet"; gitm_css.async = true;
+  (function () {
+    var gitm_css = document.createElement('link');
+    gitm_css.rel = "stylesheet";
+    gitm_css.async = true;
     gitm_css.href = "https://gitcdn.xyz/repo/imsun/gitment/gh-pages/style/default.css";
     (document.getElementsByTagName('head')[0]).appendChild(gitm_css);
-//    var gitm = document.createElement('script'); gitm.type = 'text/javascript'; gitm.async = false;
-//    gitm.src = "https://gitcdn.xyz/repo/imsun/gitment/gh-pages/dist/gitment.browser.js";
-//    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gitm);
+    var gitm = document.createElement('style');
+    gitm.innerHTML = '.gitment-comment-main,.gitment-markdown {background-color: white}';
+    (document.getElementsByTagName('head')[0]).appendChild(gitm);
   })();
 </script>
 
 
-<article id="post-107" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-107"
+         class="article article-type-post  article-index" itemscope
+         itemprop="blogPost">
   <div class="article-inner">
     
-      <header class="article-header">
-        
+    <header class="article-header">
+      
   
     <h1 itemprop="name">
       <a class="article-title" href="/posts/107/">foobar2000 ESLyric 网易云音乐 歌词脚本 ver.0.1.2(完全本地版)</a>
     </h1>
   
 
-        
-        <a href="/posts/107/" class="archive-article-date">
+      
+      <a href="/posts/107/" class="archive-article-date">
   	<time datetime="2016-08-08T14:12:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-08</time>
 </a>
-        
-      </header>
+      
+    </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>脚本名:ncm_0.1.2.js</p>
+      <p>脚本名:ncm_0.1.2.js</p>
 <ul>
 <li>GitHub下载:<a href="https://github.com/cimoc-sokka/Some-js-script-for-FB2K/releases/download/0.1.2/ncm_0.1.2.js" target="_blank" rel="external">https://github.com/cimoc-sokka/Some-js-script-for-FB2K/releases/download/0.1.2/ncm_0.1.2.js</a></li>
 <li>备用下载: <a href="http://pan.baidu.com/s/1mhGGXTm#7sjg" target="_blank" rel="external">pan.baidu.com/s/1mhGGXTm</a> 密码：7sjg ;</li>
 </ul>
 <p>添加方法:文件-参数设置-工具-ESLyric-搜索-添加-工具-导入(注意把旧版的删掉或勾掉)<br>
-        
-          <a class="article-more-a" href="/posts/107/#more">more >></a>
-        
+      
+      <a class="article-more-a" href="/posts/107/#more">more >></a>
+      
       
 
       
@@ -768,19 +782,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">web</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">api</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">网易云音乐</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">foobar2000</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">foobar2000</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">web</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -793,6 +803,10 @@
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">歌词</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">网易云音乐</a>
         		</li>
       		
 		</ul>
@@ -816,9 +830,9 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/posts/107/">展开全文 >></a>
-        </p>
+      <p class="article-more-link">
+        <a class="article-more-a" href="/posts/107/">展开全文 >></a>
+      </p>
       
 
       
@@ -844,51 +858,53 @@
 </aside>
 
 
-
-
   
     
 <script src="https://gitcdn.xyz/repo/imsun/gitment/gh-pages/dist/gitment.browser.js"></script>
 <script>
-  (function() {
-    var gitm_css = document.createElement('link'); gitm_css.rel="stylesheet"; gitm_css.async = true;
+  (function () {
+    var gitm_css = document.createElement('link');
+    gitm_css.rel = "stylesheet";
+    gitm_css.async = true;
     gitm_css.href = "https://gitcdn.xyz/repo/imsun/gitment/gh-pages/style/default.css";
     (document.getElementsByTagName('head')[0]).appendChild(gitm_css);
-//    var gitm = document.createElement('script'); gitm.type = 'text/javascript'; gitm.async = false;
-//    gitm.src = "https://gitcdn.xyz/repo/imsun/gitment/gh-pages/dist/gitment.browser.js";
-//    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gitm);
+    var gitm = document.createElement('style');
+    gitm.innerHTML = '.gitment-comment-main,.gitment-markdown {background-color: white}';
+    (document.getElementsByTagName('head')[0]).appendChild(gitm);
   })();
 </script>
 
 
-<article id="post-100" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-100"
+         class="article article-type-post  article-index" itemscope
+         itemprop="blogPost">
   <div class="article-inner">
     
-      <header class="article-header">
-        
+    <header class="article-header">
+      
   
     <h1 itemprop="name">
       <a class="article-title" href="/posts/100/">極楽浄土 -MMD作品</a>
     </h1>
   
 
-        
-        <a href="/posts/100/" class="archive-article-date">
+      
+      <a href="/posts/100/" class="archive-article-date">
   	<time datetime="2016-08-04T07:23:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-08-04</time>
 </a>
-        
-      </header>
+      
+    </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>待加入豪华套餐(滑稽)</p>
+      <p>待加入豪华套餐(滑稽)</p>
 <p>model：つみだんごさん</p>
 <p>camare:TsWEITAO</p>
 <p>motion:yurie</p>
 <p>stage:怪獣対若大将P<br>
-        
-          <a class="article-more-a" href="/posts/100/#more">more >></a>
-        
+      
+      <a class="article-more-a" href="/posts/100/#more">more >></a>
+      
       
 
       
@@ -921,9 +937,9 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/posts/100/">展开全文 >></a>
-        </p>
+      <p class="article-more-link">
+        <a class="article-more-a" href="/posts/100/">展开全文 >></a>
+      </p>
       
 
       
@@ -949,44 +965,46 @@
 </aside>
 
 
-
-
   
     
 <script src="https://gitcdn.xyz/repo/imsun/gitment/gh-pages/dist/gitment.browser.js"></script>
 <script>
-  (function() {
-    var gitm_css = document.createElement('link'); gitm_css.rel="stylesheet"; gitm_css.async = true;
+  (function () {
+    var gitm_css = document.createElement('link');
+    gitm_css.rel = "stylesheet";
+    gitm_css.async = true;
     gitm_css.href = "https://gitcdn.xyz/repo/imsun/gitment/gh-pages/style/default.css";
     (document.getElementsByTagName('head')[0]).appendChild(gitm_css);
-//    var gitm = document.createElement('script'); gitm.type = 'text/javascript'; gitm.async = false;
-//    gitm.src = "https://gitcdn.xyz/repo/imsun/gitment/gh-pages/dist/gitment.browser.js";
-//    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gitm);
+    var gitm = document.createElement('style');
+    gitm.innerHTML = '.gitment-comment-main,.gitment-markdown {background-color: white}';
+    (document.getElementsByTagName('head')[0]).appendChild(gitm);
   })();
 </script>
 
 
-<article id="post-33" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-33"
+         class="article article-type-post  article-index" itemscope
+         itemprop="blogPost">
   <div class="article-inner">
     
-      <header class="article-header">
-        
+    <header class="article-header">
+      
   
     <h1 itemprop="name">
       <a class="article-title" href="/posts/33/">foobar2000 ESLyric 网易云音乐 歌词脚本 ver.0.0.2</a>
     </h1>
   
 
-        
-        <a href="/posts/33/" class="archive-article-date">
+      
+      <a href="/posts/33/" class="archive-article-date">
   	<time datetime="2016-07-31T02:19:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-31</time>
 </a>
-        
-      </header>
+      
+    </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><a href="http://tieba.baidu.com/p/4651402375?pid=93206818274&amp;cid=0#93206818274" target="_blank" rel="external">网易云音乐Eslyric歌词插件v.0.0.1</a></p>
+      <p><a href="http://tieba.baidu.com/p/4651402375?pid=93206818274&amp;cid=0#93206818274" target="_blank" rel="external">网易云音乐Eslyric歌词插件v.0.0.1</a></p>
 <p>最先发布在了百度 foobar2000吧,现在放到这</p>
 <p>由于不了解js,爬虫是用php写的,放在我自己服务器上,js是Jeannela制作的天天动听改的…..网易云音乐的歌蛮全的,歌词基本上都有</p>
 <p>需要foobar2000播放器和ESLyric插件 (<a href="http://blog.sina.com.cn/go2spa" target="_blank" rel="external">下载</a>)</p>
@@ -1007,19 +1025,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">web</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">api</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">网易云音乐</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">foobar2000</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">foobar2000</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">web</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -1028,6 +1042,10 @@
       		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">歌词</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">网易云音乐</a>
         		</li>
       		
 		</ul>
@@ -1055,9 +1073,9 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/posts/33/">展开全文 >></a>
-        </p>
+      <p class="article-more-link">
+        <a class="article-more-a" href="/posts/33/">展开全文 >></a>
+      </p>
       
 
       
@@ -1083,44 +1101,46 @@
 </aside>
 
 
-
-
   
     
 <script src="https://gitcdn.xyz/repo/imsun/gitment/gh-pages/dist/gitment.browser.js"></script>
 <script>
-  (function() {
-    var gitm_css = document.createElement('link'); gitm_css.rel="stylesheet"; gitm_css.async = true;
+  (function () {
+    var gitm_css = document.createElement('link');
+    gitm_css.rel = "stylesheet";
+    gitm_css.async = true;
     gitm_css.href = "https://gitcdn.xyz/repo/imsun/gitment/gh-pages/style/default.css";
     (document.getElementsByTagName('head')[0]).appendChild(gitm_css);
-//    var gitm = document.createElement('script'); gitm.type = 'text/javascript'; gitm.async = false;
-//    gitm.src = "https://gitcdn.xyz/repo/imsun/gitment/gh-pages/dist/gitment.browser.js";
-//    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gitm);
+    var gitm = document.createElement('style');
+    gitm.innerHTML = '.gitment-comment-main,.gitment-markdown {background-color: white}';
+    (document.getElementsByTagName('head')[0]).appendChild(gitm);
   })();
 </script>
 
 
-<article id="post-25" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+<article id="post-25"
+         class="article article-type-post  article-index" itemscope
+         itemprop="blogPost">
   <div class="article-inner">
     
-      <header class="article-header">
-        
+    <header class="article-header">
+      
   
     <h1 itemprop="name">
       <a class="article-title" href="/posts/25/">Lovelive!Sunshine!! Aqours</a>
     </h1>
   
 
-        
-        <a href="/posts/25/" class="archive-article-date">
+      
+      <a href="/posts/25/" class="archive-article-date">
   	<time datetime="2016-07-31T01:28:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-07-31</time>
 </a>
-        
-      </header>
+      
+    </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="http://imglf1.nosdn.127.net/img/bDFMck1wSkd6dGd0eVJMK2ZKMXdzU1RhZnE2SFJKSlNCbWtPUkRyQXV0cXJCWFpiVFNVcWJBPT0.jpg?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="cd"></p>
+      <p><img src="http://imglf1.nosdn.127.net/img/bDFMck1wSkd6dGd0eVJMK2ZKMXdzU1RhZnE2SFJKSlNCbWtPUkRyQXV0cXJCWFpiVFNVcWJBPT0.jpg?imageView&amp;thumbnail=1680x0&amp;quality=96&amp;stripmeta=0&amp;type=jpg" alt="cd"></p>
 <p>CD到了(≧ ≦)/，虽然是三天前的照片</p>
 
       
@@ -1159,9 +1179,9 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/posts/25/">展开全文 >></a>
-        </p>
+      <p class="article-more-link">
+        <a class="article-more-a" href="/posts/25/">展开全文 >></a>
+      </p>
       
 
       
@@ -1187,11 +1207,8 @@
 </aside>
 
 
-
-
   
   
-
 
 
           </div>
@@ -1276,30 +1293,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">公告</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">网站</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">GPA</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">web</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">江苏科技大学</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">绩点</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">其他</a>
               </li>
              
@@ -1308,15 +1301,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">php</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">网易云音乐</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">foobar2000</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">web</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1329,6 +1318,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">歌词</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">网易云音乐</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1353,6 +1350,26 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">sif</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">公告</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">网站</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">GPA</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">江苏科技大学</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">绩点</a>
               </li>
             
             <div class="clearfix"></div>
