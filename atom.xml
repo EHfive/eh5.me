@@ -44,13 +44,13 @@
     <link href="http://eh5.me/posts/OSD-Lyrics/"/>
     <id>http://eh5.me/posts/OSD-Lyrics/</id>
     <published>2017-02-21T10:18:11.000Z</published>
-    <updated>2017-07-30T15:42:33.075Z</updated>
+    <updated>2017-07-30T22:21:33.307Z</updated>
     
     <summary type="html">
     
-      &lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;sudo apt-get install git&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;bash&quot;&gt;安装编译依赖包,及之后运行依赖包&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo apt-get install dh-autoreconf libnotify-dev libsqlite3-0-dbg libgtk2.0-dev libglib2.0-dev libdbus-glib-1-dev libcurl4-openssl-dev libssl-dev intltool&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo pip2 install pycurl&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+      &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;sudo apt-get install git&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;#安装编译依赖包,及之后运行依赖包&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo apt-get install dh-autoreconf libnotify-dev libsqlite3-0-dbg libgtk2.0-dev libglib2.0-dev libdbus-glib-1-dev libcurl4-openssl-dev libssl-dev intltool&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo pip2 install pycurl&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;….&lt;/p&gt;
-&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt; #&lt;/span&gt;&lt;span class=&quot;bash&quot;&gt;编译安装&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;git clone git@github.com:osdlyrics/osdlyrics.git&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;cd osdlyrics/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;./autogen.sh&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;make&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo make install&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;[/shell]&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt; &lt;span class=&quot;comment&quot;&gt;#编译安装&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;git &lt;span class=&quot;built_in&quot;&gt;clone&lt;/span&gt; git@github.com:osdlyrics/osdlyrics.git&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;built_in&quot;&gt;cd&lt;/span&gt; osdlyrics/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;./autogen.sh&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;make&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo make install&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;[/shell]&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
     
     </summary>
     
@@ -92,12 +92,11 @@
     <link href="http://eh5.me/posts/196/"/>
     <id>http://eh5.me/posts/196/</id>
     <published>2016-09-04T04:47:32.000Z</published>
-    <updated>2017-01-02T10:28:00.587Z</updated>
+    <updated>2017-07-30T22:22:36.763Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;一般的话,实现DDNS就是直接使用openwrt的DDNS插件,如下图&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://mcht.wicp.net/pic/DDNS/ddns%E6%8F%92%E4%BB%B6.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;一般的话,实现DDNS就是直接使用openwrt的DDNS插件&lt;/p&gt;
 &lt;p&gt;这里介绍一个更简便快速的方法&lt;/p&gt;
 &lt;h3 id=&quot;OpenWrt中的Hotplug脚本&quot;&gt;&lt;a href=&quot;#OpenWrt中的Hotplug脚本&quot; class=&quot;headerlink&quot; title=&quot;OpenWrt中的Hotplug脚本&quot;&gt;&lt;/a&gt;OpenWrt中的Hotplug脚本&lt;/h3&gt;&lt;p&gt;Hotplug，直译就是热插拔。在OpenWrt中，无论何时一个设备从系统中增删，都产生一个&amp;ldquo;热插拔事件&amp;rdquo;。&lt;/p&gt;
 &lt;p&gt;每次网络接口启动（up）或者关闭（down）的时候，所有在&lt;code&gt;/etc/hotplug.d/iface/&lt;/code&gt;目录中的脚本都会以字母顺序执行。根据一个不成文的规则，会在每个脚本的前面加上一个数字前缀来设置正确的运行顺序。这就是为什么脚本名称都像：&lt;code&gt;/etc/hotplug.d/iface/nn-scriptname&lt;/code&gt;的原因。&lt;/p&gt;
