@@ -56,7 +56,7 @@
 		  <h1 class="header-author"><a href="/">EH5</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">我的个人blog</p>
+		<p class="header-subtitle">一只偶像宅,不叫cimoc了</p>
 		
 
 		<nav class="header-menu">
@@ -74,10 +74,6 @@
             
     			
     			<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">友链</a>
-    			
-            
-    			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
     			
             
 		</nav>
@@ -112,7 +108,7 @@
 			  <h1 class="header-author js-header-author">EH5</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>我的个人blog<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>一只偶像宅,不叫cimoc了<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -151,7 +147,21 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-25" class="article article-type-post " itemscope itemprop="blogPost">
+            
+<script src="https://gitcdn.xyz/repo/imsun/gitment/gh-pages/dist/gitment.browser.js"></script>
+<script>
+  (function() {
+    var gitm_css = document.createElement('link'); gitm_css.rel="stylesheet"; gitm_css.async = true;
+    gitm_css.href = "https://gitcdn.xyz/repo/imsun/gitment/gh-pages/style/default.css";
+    (document.getElementsByTagName('head')[0]).appendChild(gitm_css);
+//    var gitm = document.createElement('script'); gitm.type = 'text/javascript'; gitm.async = false;
+//    gitm.src = "https://gitcdn.xyz/repo/imsun/gitment/gh-pages/dist/gitment.browser.js";
+//    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(gitm);
+  })();
+</script>
+
+
+<article id="post-25" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -303,28 +313,32 @@
 
 
   
-  
+
   
 
   
 
   
     <section id="comments">
-      <div id="disqus_thread"></div>
-        <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'eh5'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
+      <div id="gitment"></div>
+      <script>
+        var gitment = new Gitment({
+          id: location.pathname, // 可选。默认为 location.href
+          owner: 'cimoc-sokka',
+          repo: 'eh5.me',
+          oauth: {
+            client_id: '57ce52bed52e8561ce77',
+            client_secret: '9324c3f263ab7cfc32fc3d45bac691f462830468',
+          },
+        })
+        gitment.render('gitment')
       </script>
-      <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <noscript>Please enable JavaScript to view the comments powered by Gitment.</noscript>
     </section>
   
+
+  
+
 
 
           </div>
@@ -378,25 +392,17 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
       
     
-      
-      
-      
-    
     
 
     <ul style="width: 70%">
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
-      
-        
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">友链</a></li>
       
         
     </ul>
@@ -469,10 +475,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">php</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">CD</a>
               </li>
              
@@ -481,11 +483,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ubuntu</a>
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">favicon</a>
+                <a href="javascript:void(0)" class="js-tag color2">ubuntu</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -494,6 +496,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">sif</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">favicon</a>
               </li>
             
             <div class="clearfix"></div>
@@ -557,12 +563,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     	</section>
     
 
-    
-    	<section class="tools-section tools-section-me" q-show="aboutme">
-  	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">肥宅</div>
-  	  	
-    	</section>
     
   </div>
   
