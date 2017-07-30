@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>EH5</title>
+  <subtitle>一只偶像宅,不叫cimoc了</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://eh5.me/"/>
+  <updated>2017-07-30T15:47:40.622Z</updated>
+  <id>http://eh5.me/</id>
+  
+  <author>
+    <name>EH5</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LoveLive SIF 抽卡成功率计算</title>
+    <link href="http://eh5.me/posts/llsif/"/>
+    <id>http://eh5.me/posts/llsif/</id>
+    <published>2017-03-18T14:30:51.000Z</published>
+    <updated>2017-07-30T15:47:40.622Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;https://llsif.sokka.cn/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://llsif.sokka.cn/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;4.0后回归国服,&lt;/p&gt;
+&lt;p&gt;用着LLhelper , dash.mo
+    
+    </summary>
+    
+      <category term="网络" scheme="http://eh5.me/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="lovelive" scheme="http://eh5.me/tags/lovelive/"/>
+    
+      <category term="sif" scheme="http://eh5.me/tags/sif/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Ubuntu 下安装 OSD Lyrics 并添加自定义歌词源</title>
+    <link href="http://eh5.me/posts/OSD-Lyrics/"/>
+    <id>http://eh5.me/posts/OSD-Lyrics/</id>
+    <published>2017-02-21T10:18:11.000Z</published>
+    <updated>2017-07-30T15:42:33.075Z</updated>
+    
+    <summary type="html">
+    
+      &lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;sudo apt-get install git&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt;#&lt;/span&gt;&lt;span class=&quot;bash&quot;&gt;安装编译依赖包,及之后运行依赖包&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo apt-get install dh-autoreconf libnotify-dev libsqlite3-0-dbg libgtk2.0-dev libglib2.0-dev libdbus-glib-1-dev libcurl4-openssl-dev libssl-dev intltool&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo pip2 install pycurl&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;….&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;meta&quot;&gt; #&lt;/span&gt;&lt;span class=&quot;bash&quot;&gt;编译安装&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;git clone git@github.com:osdlyrics/osdlyrics.git&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;cd osdlyrics/&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;./autogen.sh&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;make&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;sudo make install&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;[/shell]&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="网络" scheme="http://eh5.me/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="歌词" scheme="http://eh5.me/tags/%E6%AD%8C%E8%AF%8D/"/>
+    
+      <category term="ubuntu" scheme="http://eh5.me/tags/ubuntu/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>favicon-api</title>
+    <link href="http://eh5.me/posts/favicon-api/"/>
+    <id>http://eh5.me/posts/favicon-api/</id>
+    <published>2017-02-18T15:31:58.000Z</published>
+    <updated>2017-07-30T15:41:45.340Z</updated>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;&lt;p&gt;&lt;a href=&quot;https://mcht.wicp.net/api/favicon/index.php?url0=&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://mcht.wicp.net/api/favicon/
+    
+    </summary>
+    
+      <category term="网络" scheme="http://eh5.me/categories/%E7%BD%91%E7%BB%9C/"/>
+    
+      <category term="php" scheme="http://eh5.me/categories/%E7%BD%91%E7%BB%9C/php/"/>
+    
+    
+      <category term="api" scheme="http://eh5.me/tags/api/"/>
+    
+      <category term="favicon" scheme="http://eh5.me/tags/favicon/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OpenWrt Hotplug脚本 + Dnspod api 实现ms级延迟的DDNS记录更新</title>
+    <link href="http://eh5.me/posts/196/"/>
+    <id>http://eh5.me/posts/196/</id>
+    <published>2016-09-04T04:47:32.000Z</published>
+    <updated>2017-01-02T10:28:00.587Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一般的话,实现DDNS就是直接使用openwrt的DDNS插件,如下图&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://mcht.wicp.net/pic/DDNS/ddns%E6%8F%92%E4%BB%B6.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;这里介绍一个更简便快速的方法&lt;/p&gt;
+&lt;h3 id=&quot;OpenWrt中的Hotplug脚本&quot;&gt;&lt;a href=&quot;#OpenWrt中的Hotplug脚本&quot; class=&quot;headerlink&quot; title=&quot;OpenWrt中的Hotplug脚本&quot;&gt;&lt;/a&gt;OpenWrt中的Hotplug脚本&lt;/h3&gt;&lt;p&gt;Hotplug，直译就是热插拔。在OpenWrt中，无论何时一个设备从系统中增删，都产生一个&amp;ldquo;热插拔事件&amp;rdquo;。&lt;/p&gt;
+&lt;p&gt;每次网络接口启动（up）或者关闭（down）的时候，所有在&lt;code&gt;/etc/hotplug.d/iface/&lt;/code&gt;目录中的脚本都会以字母顺序执行。根据一个不成文的规则，会在每个脚本的前面加上一个数字前缀来设置正确的运行顺序。这就是为什么脚本名称都像：&lt;code&gt;/etc/hotplug.d/iface/nn-scriptname&lt;/code&gt;的原因。&lt;/p&gt;
+&lt;p&gt;在iface hotplug脚本中有三个主要的环境变量：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;变量名称&lt;/th&gt;
+&lt;th style=&quot;text-align:left&quot;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;ACTION&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;“ifup” 或者 “ifdown”&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;INTERFACE&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;网络接口的名称，如”wan”&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;DEVICE&lt;/td&gt;
+&lt;td style=&quot;text-align:left&quot;&gt;物理设备的名称，如”br-lan”&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;利用hotplug脚本可以在网络接口启动或关闭时执行相应的动作&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="openwrt" scheme="http://eh5.me/categories/openwrt/"/>
+    
+      <category term="网络" scheme="http://eh5.me/categories/openwrt/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>网易云音乐API php示例</title>
+    <link href="http://eh5.me/posts/126/"/>
+    <id>http://eh5.me/posts/126/</id>
+    <published>2016-08-29T10:31:44.000Z</published>
+    <updated>2017-07-30T15:15:37.408Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;如下&lt;br&gt;
+    
+    </summary>
+    
+      <category term="php" scheme="http://eh5.me/categories/php/"/>
+    
+      <category term="网络" scheme="http://eh5.me/categories/php/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="api" scheme="http://eh5.me/tags/api/"/>
+    
+      <category term="网易云音乐" scheme="http://eh5.me/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/"/>
+    
+      <category term="php" scheme="http://eh5.me/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>foobar2000 ESLyric 网易云音乐 歌词脚本 ver.0.1.2(完全本地版)</title>
+    <link href="http://eh5.me/posts/107/"/>
+    <id>http://eh5.me/posts/107/</id>
+    <published>2016-08-08T14:12:36.000Z</published>
+    <updated>2017-07-30T20:55:16.876Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;脚本名:ncm_0.1.2.js&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GitHub下载:&lt;a href=&quot;https://github.com/cimoc-sokka/Some-js-script-for-FB2K/releases/download/0.1.2/ncm_0.1.2.js&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/cimoc-sokka/Some-js-script-for-FB2K/releases/download/0.1.2/ncm_0.1.2.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;备用下载: &lt;a href=&quot;http://pan.baidu.com/s/1mhGGXTm#7sjg&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;pan.baidu.com/s/1mhGGXTm&lt;/a&gt; 密码：7sjg ;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;添加方法:文件-参数设置-工具-ESLyric-搜索-添加-工具-导入(注意把旧版的删掉或勾掉)&lt;br&gt;
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://eh5.me/categories/javascript/"/>
+    
+      <category term="网络" scheme="http://eh5.me/categories/javascript/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="web" scheme="http://eh5.me/tags/web/"/>
+    
+      <category term="api" scheme="http://eh5.me/tags/api/"/>
+    
+      <category term="foobar2000" scheme="http://eh5.me/tags/foobar2000/"/>
+    
+      <category term="升级" scheme="http://eh5.me/tags/%E5%8D%87%E7%BA%A7/"/>
+    
+      <category term="接口" scheme="http://eh5.me/tags/%E6%8E%A5%E5%8F%A3/"/>
+    
+      <category term="歌词" scheme="http://eh5.me/tags/%E6%AD%8C%E8%AF%8D/"/>
+    
+      <category term="网易云音乐" scheme="http://eh5.me/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>極楽浄土 -MMD作品</title>
+    <link href="http://eh5.me/posts/100/"/>
+    <id>http://eh5.me/posts/100/</id>
+    <published>2016-08-04T07:23:24.000Z</published>
+    <updated>2017-01-02T13:00:35.016Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;待加入豪华套餐(滑稽)&lt;/p&gt;
+&lt;p&gt;model：つみだんごさん&lt;/p&gt;
+&lt;p&gt;camare:TsWEITAO&lt;/p&gt;
+&lt;p&gt;motion:yurie&lt;/p&gt;
+&lt;p&gt;stage:怪獣対若大将P&lt;br&gt;
+    
+    </summary>
+    
+      <category term="说说" scheme="http://eh5.me/categories/%E8%AF%B4%E8%AF%B4/"/>
+    
+    
+      <category term="其他" scheme="http://eh5.me/tags/%E5%85%B6%E4%BB%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>foobar2000 ESLyric 网易云音乐 歌词脚本 ver.0.0.2</title>
+    <link href="http://eh5.me/posts/33/"/>
+    <id>http://eh5.me/posts/33/</id>
+    <published>2016-07-31T02:19:35.000Z</published>
+    <updated>2017-01-02T09:30:39.387Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;a href=&quot;http://tieba.baidu.com/p/4651402375?pid=93206818274&amp;amp;cid=0#93206818274&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;网易云音乐Eslyric歌词插件v.0.0.
+    
+    </summary>
+    
+      <category term="javascript" scheme="http://eh5.me/categories/javascript/"/>
+    
+      <category term="php" scheme="http://eh5.me/categories/javascript/php/"/>
+    
+      <category term="网络" scheme="http://eh5.me/categories/javascript/php/%E7%BD%91%E7%BB%9C/"/>
+    
+    
+      <category term="web" scheme="http://eh5.me/tags/web/"/>
+    
+      <category term="api" scheme="http://eh5.me/tags/api/"/>
+    
+      <category term="foobar2000" scheme="http://eh5.me/tags/foobar2000/"/>
+    
+      <category term="接口" scheme="http://eh5.me/tags/%E6%8E%A5%E5%8F%A3/"/>
+    
+      <category term="歌词" scheme="http://eh5.me/tags/%E6%AD%8C%E8%AF%8D/"/>
+    
+      <category term="网易云音乐" scheme="http://eh5.me/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Lovelive!Sunshine!! Aqours</title>
+    <link href="http://eh5.me/posts/25/"/>
+    <id>http://eh5.me/posts/25/</id>
+    <published>2016-07-31T01:28:47.000Z</published>
+    <updated>2017-01-02T09:30:07.240Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://imglf1.nosdn.127.net/img/bDFMck1wSkd6dGd0eVJMK2ZKMXdzU1RhZnE2SFJKSlNCbWtPUkRyQXV0cXJCWFpiVFNVcWJBPT0.jpg?imageView&amp;amp;t
+    
+    </summary>
+    
+      <category term="说说" scheme="http://eh5.me/categories/%E8%AF%B4%E8%AF%B4/"/>
+    
+    
+      <category term="CD" scheme="http://eh5.me/tags/CD/"/>
+    
+      <category term="青空Jumping Heart" scheme="http://eh5.me/tags/%E9%9D%92%E7%A9%BAJumping-Heart/"/>
+    
+  </entry>
+  
+</feed>
