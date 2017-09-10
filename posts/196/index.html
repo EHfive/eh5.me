@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="EH5">
 <meta property="og:description" content="一般的话,实现DDNS就是直接使用openwrt的DDNS插件 这里介绍一个更简便快速的方法 OpenWrt中的Hotplug脚本Hotplug，直译就是热插拔。在OpenWrt中，无论何时一个设备从系统中增删，都产生一个&amp;ldquo;热插拔事件&amp;rdquo;。 每次网络接口启动（up）或者关闭（down）的时候，所有在/etc/hotplug.d/iface/目录中的脚本都会以字母顺序执行。根据">
 <meta property="og:locale" content="zh-cmn-Hans">
-<meta property="og:updated_time" content="2017-07-30T22:22:36.763Z">
+<meta property="og:updated_time" content="2017-09-10T11:43:55.402Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OpenWrt Hotplug脚本 + Dnspod api 实现ms级延迟的DDNS记录更新">
 <meta name="twitter:description" content="一般的话,实现DDNS就是直接使用openwrt的DDNS插件 这里介绍一个更简便快速的方法 OpenWrt中的Hotplug脚本Hotplug，直译就是热插拔。在OpenWrt中，无论何时一个设备从系统中增删，都产生一个&amp;ldquo;热插拔事件&amp;rdquo;。 每次网络接口启动（up）或者关闭（down）的时候，所有在/etc/hotplug.d/iface/目录中的脚本都会以字母顺序执行。根据">
@@ -241,8 +241,9 @@
 </ul>
 <p>如此,利用上两项就可以实现ms级延迟的DDNS记录更新</p>
 <p>在<code>/etc/hotplug.d/iface</code>下新建<code>30-dnspod.sh</code>,内容如下</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line"><span class="comment"># wan ifup</span></div><div class="line">[ <span class="variable">$ACTION</span> = <span class="string">"ifup"</span> -a <span class="variable">$INTERFACE</span> = <span class="string">"wan"</span> ]</div><div class="line">wget --post-data=<span class="string">"login_email=USER@MAIL.COM&amp;login_password=YOUR_PASSWORD&amp;format=json&amp;domain_id=12345678&amp;record_id=987654321&amp;record_line=默认&amp;sub_domain=what"</span>  https://dnsapi.cn/Record.Ddns --no-check-certificate --output-document=/dev/null</div></pre></td></tr></table></figure>
-<p>domain_id和record_id可以使用官方的<a href="https://support.dnspod.cn/Support/api" target="_blank" rel="external">客户端</a>或使用<a href="https://www.dnspod.cn/docs/domains.html#id1" target="_blank" rel="external">域名api</a>获取.dnspod ddns api可以不带ip数据,他会获取你的访问ip,如此正确设置好参数和post数据后,每次wan口打开就会执行脚本下的语句,实现A记录更新</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#!/bin/sh</span></div><div class="line"><span class="comment"># wan ifup</span></div><div class="line"><span class="keyword">if</span> [ <span class="variable">$ACTION</span> = <span class="string">"ifup"</span> -a <span class="variable">$INTERFACE</span> = <span class="string">"wan"</span> ]</div><div class="line"><span class="keyword">then</span></div><div class="line">    wget -q -O - --post-data=<span class="string">"login_token=36797,805e5d4cfecebe40eeafc7758590ace2&amp;format=json&amp;domain_id=60560160&amp;record_id=317740618&amp;record_line_id=0&amp;sub_domain=home"</span>  https://dnsapi.cn/Record.Ddns --no-check-certificate  &gt; /dev/null</div><div class="line"><span class="keyword">fi</span></div></pre></td></tr></table></figure>
+<p>domain_id和record_id可以使用官方的<a href="https://support.dnspod.cn/Support/api" target="_blank" rel="external">客户端</a>或使用<a href="https://www.dnspod.cn/docs/domains.html#id1" target="_blank" rel="external">域名api</a>获取</p>
+<p>dnspod ddns api可以不带ip数据,他会获取你的访问ip,如此正确设置好参数和post数据后,每次wan口打开就会执行脚本下的语句,实现A记录更新</p>
 <p>openwrt下的wegt不能验证dnspod的证书,所以要加上<code>--no-check-certificate</code>参数</p>
 
       
@@ -483,6 +484,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">CD</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">青空Jumping Heart</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">api</a>
               </li>
              
@@ -492,10 +501,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">web</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">升级</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -515,19 +520,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CD</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">青空Jumping Heart</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">ubuntu</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">favicon</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -536,6 +529,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">sif</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">favicon</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">升级</a>
               </li>
             
             <div class="clearfix"></div>
