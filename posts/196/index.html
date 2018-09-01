@@ -15,12 +15,10 @@
 <meta property="og:site_name" content="EH5">
 <meta property="og:description" content="一般的话,实现DDNS就是直接使用openwrt的DDNS插件 这里介绍一个更简便快速的方法 OpenWrt中的Hotplug脚本Hotplug，直译就是热插拔。在OpenWrt中，无论何时一个设备从系统中增删，都产生一个&amp;ldquo;热插拔事件&amp;rdquo;。 每次网络接口启动（up）或者关闭（down）的时候，所有在/etc/hotplug.d/iface/目录中的脚本都会以字母顺序执行。根据">
 <meta property="og:locale" content="zh-cmn-Hans">
-<meta property="og:updated_time" content="2017-09-10T11:43:55.402Z">
+<meta property="og:updated_time" content="2017-09-10T11:43:55.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OpenWrt Hotplug脚本 + Dnspod api 实现ms级延迟的DDNS记录更新">
 <meta name="twitter:description" content="一般的话,实现DDNS就是直接使用openwrt的DDNS插件 这里介绍一个更简便快速的方法 OpenWrt中的Hotplug脚本Hotplug，直译就是热插拔。在OpenWrt中，无论何时一个设备从系统中增删，都产生一个&amp;ldquo;热插拔事件&amp;rdquo;。 每次网络接口启动（up）或者关闭（down）的时候，所有在/etc/hotplug.d/iface/目录中的脚本都会以字母顺序执行。根据">
-  
-    <link rel="alternative" href="/atom.xml" title="EH5" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -47,7 +45,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="https://i.loli.net/2017/07/30/597d5306b696c.png" class="js-avatar">
+			<img src="https://i.loli.net/2018/09/01/5b8a1411eb310.jpg" class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">EH5</a></h1>
@@ -77,13 +75,9 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
-		        
 					<a class="github" target="_blank" href="https://github.com/EHfive" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="bilibili" target="_blank" href="https://space.bilibili.com/784705/#!/index" title="bilibili"><i class="icon-bilibili"></i></a>
-		        
-					<a class="mail" target="_blank" href="mailto:my@eh5.me" title="mail"><i class="icon-mail"></i></a>
+					<a class="mail" target="_blank" href="mailto:i@eh5.me" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
 		</nav>
@@ -101,7 +95,7 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="https://i.loli.net/2017/07/30/597d5306b696c.png" class="js-avatar">
+				<img src="https://i.loli.net/2018/09/01/5b8a1411eb310.jpg" class="js-avatar">
 			</div>
 			<hgroup>
 			  <h1 class="header-author js-header-author">EH5</h1>
@@ -118,13 +112,9 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="rss" target="_blank" href="/atom.xml" title="rss"><i class="icon-rss"></i></a>
-			        
 						<a class="github" target="_blank" href="https://github.com/EHfive" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="bilibili" target="_blank" href="https://space.bilibili.com/784705/#!/index" title="bilibili"><i class="icon-bilibili"></i></a>
-			        
-						<a class="mail" target="_blank" href="mailto:my@eh5.me" title="mail"><i class="icon-mail"></i></a>
+						<a class="mail" target="_blank" href="mailto:i@eh5.me" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -397,7 +387,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 EH5
+    		&copy; 2018 EH5
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -472,23 +462,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">公告</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">网站</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">其他</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">CD</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">青空Jumping Heart</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -501,6 +475,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">web</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">升级</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -520,7 +498,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">CD</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">青空Jumping Heart</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">ubuntu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">favicon</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -532,11 +522,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">favicon</a>
+                <a href="javascript:void(0)" class="js-tag color3">公告</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">升级</a>
+                <a href="javascript:void(0)" class="js-tag color3">网站</a>
               </li>
             
             <div class="clearfix"></div>

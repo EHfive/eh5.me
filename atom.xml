@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://eh5.me/"/>
-  <updated>2017-07-30T15:47:40.622Z</updated>
+  <updated>2017-07-30T15:47:40.000Z</updated>
   <id>http://eh5.me/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://eh5.me/posts/llsif/"/>
     <id>http://eh5.me/posts/llsif/</id>
     <published>2017-03-18T14:30:51.000Z</published>
-    <updated>2017-07-30T15:47:40.622Z</updated>
+    <updated>2017-07-30T15:47:40.000Z</updated>
     
     <summary type="html">
     
@@ -44,7 +44,7 @@
     <link href="http://eh5.me/posts/OSD-Lyrics/"/>
     <id>http://eh5.me/posts/OSD-Lyrics/</id>
     <published>2017-02-21T10:18:11.000Z</published>
-    <updated>2017-07-30T22:21:33.307Z</updated>
+    <updated>2017-07-30T22:21:33.000Z</updated>
     
     <summary type="html">
     
@@ -68,7 +68,7 @@
     <link href="http://eh5.me/posts/favicon-api/"/>
     <id>http://eh5.me/posts/favicon-api/</id>
     <published>2017-02-18T15:31:58.000Z</published>
-    <updated>2017-07-30T15:41:45.340Z</updated>
+    <updated>2017-07-30T15:41:45.000Z</updated>
     
     <summary type="html">
     
@@ -92,7 +92,7 @@
     <link href="http://eh5.me/posts/196/"/>
     <id>http://eh5.me/posts/196/</id>
     <published>2016-09-04T04:47:32.000Z</published>
-    <updated>2017-09-10T11:43:55.402Z</updated>
+    <updated>2017-09-10T11:43:55.000Z</updated>
     
     <summary type="html">
     
@@ -139,7 +139,7 @@
     <link href="http://eh5.me/posts/126/"/>
     <id>http://eh5.me/posts/126/</id>
     <published>2016-08-29T10:31:44.000Z</published>
-    <updated>2017-07-30T15:15:37.408Z</updated>
+    <updated>2017-07-30T15:15:37.000Z</updated>
     
     <summary type="html">
     
@@ -165,7 +165,7 @@
     <link href="http://eh5.me/posts/107/"/>
     <id>http://eh5.me/posts/107/</id>
     <published>2016-08-08T14:12:36.000Z</published>
-    <updated>2017-07-30T20:55:16.876Z</updated>
+    <updated>2017-07-30T20:55:16.000Z</updated>
     
     <summary type="html">
     
@@ -189,13 +189,13 @@
     
       <category term="web" scheme="http://eh5.me/tags/web/"/>
     
+      <category term="升级" scheme="http://eh5.me/tags/%E5%8D%87%E7%BA%A7/"/>
+    
       <category term="接口" scheme="http://eh5.me/tags/%E6%8E%A5%E5%8F%A3/"/>
     
       <category term="歌词" scheme="http://eh5.me/tags/%E6%AD%8C%E8%AF%8D/"/>
     
       <category term="网易云音乐" scheme="http://eh5.me/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/"/>
-    
-      <category term="升级" scheme="http://eh5.me/tags/%E5%8D%87%E7%BA%A7/"/>
     
   </entry>
   
@@ -204,7 +204,7 @@
     <link href="http://eh5.me/posts/100/"/>
     <id>http://eh5.me/posts/100/</id>
     <published>2016-08-04T07:23:24.000Z</published>
-    <updated>2017-01-02T13:00:35.016Z</updated>
+    <updated>2017-01-02T13:00:35.000Z</updated>
     
     <summary type="html">
     
@@ -228,7 +228,7 @@
     <link href="http://eh5.me/posts/33/"/>
     <id>http://eh5.me/posts/33/</id>
     <published>2016-07-31T02:19:35.000Z</published>
-    <updated>2017-01-02T09:30:39.387Z</updated>
+    <updated>2017-01-02T09:30:39.000Z</updated>
     
     <summary type="html">
     
@@ -262,7 +262,7 @@
     <link href="http://eh5.me/posts/25/"/>
     <id>http://eh5.me/posts/25/</id>
     <published>2016-07-31T01:28:47.000Z</published>
-    <updated>2017-01-02T09:30:07.240Z</updated>
+    <updated>2017-01-02T09:30:07.000Z</updated>
     
     <summary type="html">
     
