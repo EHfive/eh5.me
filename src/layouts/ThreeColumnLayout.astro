@@ -1,0 +1,30 @@
+---
+export interface Props {
+  title: string;
+  class?: string;
+}
+
+import BaseLayout from "./BaseLayout.astro";
+const { title, class: clazz } = Astro.props;
+---
+
+<BaseLayout title={title}>
+  <div
+    class="flex flex-row <xl:flex-col <md:bg-base-100"
+    class:list={clazz ? [clazz] : undefined}
+  >
+    <div class="flex-1 order-first w-full mx-auto">
+      <div class="sticky top-16 flow-root">
+        <slot name="left" />
+      </div>
+    </div>
+    <div class="flex-1 xl:order-last w-full mx-auto">
+      <div class="sticky top-16 flow-root">
+        <slot name="right" />
+      </div>
+    </div>
+    <div class="flex-none flex-shrink-1 w-full mx-auto max-w-screen-md">
+      <slot />
+    </div>
+  </div>
+</BaseLayout>

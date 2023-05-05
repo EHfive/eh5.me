@@ -1,0 +1,7 @@
+{
+    "plugins": {
+        "@textlint/markdown": {
+            "extensions": [".mdx"]
+        }
+    }
+}

@@ -1,0 +1,26 @@
+diff --git a/package.json b/package.json
+index cd6c1afc0cd2fc7e49364971bc526dcadff79843..feebd498f49c97a8f01f447f7e7a5b8a273992b9 100644
+--- a/package.json
++++ b/package.json
+@@ -27,12 +27,18 @@
+ 		"dist"
+ 	],
+ 	"exports": {
+-		".": "./dist/src/index.mjs",
+-		"./components": "./dist/src/astro/index.mjs"
++		".": {
++			"default": "./dist/src/index.mjs",
++			"types": "./dist/src/index.d.ts"
++		},
++		"./components": {
++			"default": "./dist/src/astro/index.mjs",
++			"types": "./dist/src/astro/index.d.ts"
++		}
+ 	},
+ 	"typesVersions": {
+ 		"*": {
+-			"": [
++			".": [
+ 				"./dist/src/index.d.ts"
+ 			],
+ 			"components": [

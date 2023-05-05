@@ -1,0 +1,7 @@
+{
+  "feed": {
+    "tagged": "標籤",
+    "postCount{count:0}": "什麼都沒有...",
+    "postCount{count:1}": "有 {count} 篇文章"
+  }
+}

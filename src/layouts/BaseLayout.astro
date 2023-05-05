@@ -1,0 +1,77 @@
+---
+export interface Props {
+  title: string;
+}
+
+import { HrefLangs } from "astro-i18n/components";
+import Header from "~/components/Header.astro";
+import Footer from "~/components/Footer.astro";
+
+import { getLanguageFromURL } from "~/utils";
+import { languageInfo, Language } from "~/i18n";
+
+const { title } = Astro.props;
+const lang = getLanguageFromURL(Astro.url.pathname) as Language;
+const path = Astro.url.pathname;
+---
+
+<!DOCTYPE html>
+<html lang={languageInfo[lang].code}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <!-- <link rel="authorization_endpoint" href="https://indielogin.com/auth" /> -->
+    <link rel="webmention" href="https://webmention.io/eh5.me/webmention" />
+    <link rel="pingback" href="https://webmention.io/eh5.me/xmlrpc" />
+    <HrefLangs />
+    <title>{title}</title>
+    <script is:inline>
+      // document.documentElement.dataset.theme = "dark";
+    </script>
+  </head>
+  <body>
+    <Header lang={lang} path={path} />
+    <div
+      class="pt-16 mb-2 max-w-screen-2xl mx-auto <md:bg-base-100"
+    >
+      <slot />
+    </div>
+    <Footer />
+    <style is:global>
+      :root {
+        --accent: 124, 58, 237;
+        --accent-gradient: linear-gradient(
+          45deg,
+          rgb(var(--accent)),
+          #da62c4 30%,
+          white 60%
+        );
+      }
+
+      html {
+        @apply !bg-base-200 scroll-pt-16 scroll-smooth;
+
+        font-family: system-ui, sans-serif;
+      }
+
+      code {
+        font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+          DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+      }
+
+      html.is-animating .transition-fade {
+        opacity: 0;
+      }
+
+      .link-hover {
+        text-decoration-line: none;
+      }
+      .link-hover:hover {
+        text-decoration-line: underline;
+      }
+    </style>
+  </body>
+</html>

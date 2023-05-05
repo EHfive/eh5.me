@@ -1,0 +1,39 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { allPostsFilterByLang } from "~/content";
+import { languages } from "~/i18n";
+import { astroI18n, t } from "astro-i18n";
+astroI18n.init(Astro);
+
+export interface Props {
+  entry: CollectionEntry<"blog">;
+  origLang?: string;
+}
+
+export async function getStaticPaths() {
+  const paths = [];
+
+  for (const lang of languages) {
+    const posts = allPostsFilterByLang(lang);
+    for (const post of posts) {
+      paths.push({
+        params: {
+          lang,
+          slug: post.subSlug,
+        },
+        props: {
+          entry: post,
+          origLang: post.fallback ? post.origLang : undefined,
+        },
+      });
+    }
+  }
+  return paths;
+}
+
+import BlogPostLayout from "~/layouts/BlogPostLayout.astro";
+
+const { entry, origLang } = Astro.props;
+---
+
+<BlogPostLayout entry={entry} origLang={origLang} />

@@ -1,0 +1,21 @@
+---
+import { tagCountFromPosts } from "~/utils";
+import BlogFeedLayout from "~/layouts/BlogFeedLayout.astro";
+import { allPostsFilterByLang, isNotDraft } from "~/content";
+import { languages } from "~/i18n";
+
+export async function getStaticPaths() {
+  return languages.map((lang) => ({
+    params: {
+      lang,
+    },
+  }));
+}
+
+const { lang } = Astro.params;
+
+const posts = allPostsFilterByLang(lang!).filter(isNotDraft);
+const tagCount = tagCountFromPosts(posts);
+---
+
+<BlogFeedLayout lang={lang!} title="{ eh5.me }" posts={posts} tags={tagCount} />

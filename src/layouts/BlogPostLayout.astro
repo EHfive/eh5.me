@@ -1,0 +1,123 @@
+---
+import type { MarkdownHeading } from "astro";
+import type { CollectionEntry } from "astro:content";
+export interface Props {
+  entry: CollectionEntry<"blog">;
+  origLang?: string;
+}
+
+import ThreeColumnLayout from "./ThreeColumnLayout.astro";
+import type { IToc } from "~/components/Toc";
+import Toc from "~/components/Toc";
+import Webmentions from "~/components/Webmentions/index";
+import { Image } from "astro:assets";
+import { getLanguageFromURL, splitLangFromSlug } from "~/utils";
+import { languages } from "~/i18n";
+
+const { entry } = Astro.props;
+const { title, pubDate, modDate, summary, image } = entry.data;
+
+function buildToc(headings: MarkdownHeading[]) {
+  const root: IToc = {
+    heading: { depth: -Infinity, slug: "", text: "" },
+    children: [],
+  };
+  const stack = [root];
+
+  for (const heading of headings) {
+    let parent = stack.at(-1)!;
+    while (parent.heading.depth >= heading.depth) {
+      stack.pop();
+      const last = stack.at(-1);
+      if (!last) {
+        throw new Error();
+      }
+      parent = last;
+    }
+    const children = parent.children || (parent.children = []);
+    const node = { heading };
+    children.push(node);
+    stack.push(node);
+  }
+
+  return root.children!;
+}
+
+
+const baseUrl = Astro.site
+const targets: string[] = [];
+const [, slug] = splitLangFromSlug(Astro.url.pathname);
+for (const lang of languages) {
+  const url = new URL(`/${lang}/${slug}`, baseUrl);
+  targets.push(url.toString());
+  const slug2 = slug.endsWith("/") ? slug.slice(0, -1) : slug + "/";
+  const url2 = new URL(`/${lang}/${slug2}`, baseUrl);
+  targets.push(url2.toString());
+}
+
+const { Content, headings } = await entry.render();
+---
+
+<ThreeColumnLayout title={title}>
+  <div
+    slot="left"
+    class="mt-16 ml-auto mr-8 flex flex-col items-end <xl:hidden justify-center"
+  >
+    <a
+      href="#post-comment"
+      class="btn btn-lg btn-circle btn-ghost bg-base-100 shadow-lg hover:shadow-xl p-0"
+      ><span class="i-heroicons-chat-bubble-left-right w-6 h-6"></span></a
+    >
+  </div>
+
+  <aside slot="right" class="xl:mt-8 overflow-auto <xl:hidden">
+    <Toc toc={buildToc(headings)} client:idle />
+  </aside>
+  <div class="card bg-base-100 shadow-xl <md:rounded-0 <md:shadow-none">
+    <div class="card-body break-words">
+      <article class="h-entry">
+        <a class="u-url hidden" href="./">{title}</a>
+        {image && <Image class="u-featured hidden" src={image} alt="" />}
+
+        <div class="font-semibold">
+          <div class="p-author h-card hidden" style="display: none;">
+            <a class="p-name" href="https://eh5.me/">Huang-Huang Bao</a>
+            <img
+              class="u-photo"
+              loading="lazy"
+              decoding="async"
+              src="/avatar.jpg"
+              alt=""
+            />
+          </div>
+          <time class="dt-published opacity-75" datetime={pubDate.toISOString()}
+            >{pubDate.toLocaleDateString()}</time
+          >
+          {
+            modDate && (
+              <time
+                class="dt-updated opacity-75 hidden"
+                datetime={modDate?.toISOString()}
+              >
+                {modDate?.toLocaleDateString()}
+              </time>
+            )
+          }
+        </div>
+        <h1 class="p-name card-title text-3xl mt-2 mb-8 leading-[1.25]">
+          {title}
+        </h1>
+
+        {summary && <p class="p-summary hidden">{summary}</p>}
+
+        <main class="e-content prose prose-blog !max-w-full">
+          <Content />
+        </main>
+      </article>
+      <div class="divider"></div>
+      <div id="post-comment">
+        <Webmentions targets={targets} client:only="solid-js" />
+      </div>
+    </div>
+  </div>
+</ThreeColumnLayout>

@@ -1,0 +1,140 @@
+---
+import type { CollectionEntry } from "astro:content";
+export interface Props {
+  lang: string;
+  title: string;
+  activeTag?: string;
+  posts: CollectionEntry<"blog">[];
+  tags: Record<string, number | undefined>;
+}
+
+import { getImage, Image } from "astro:assets";
+import { t } from "astro-i18n";
+import { languageInfo } from "~/i18n";
+import { splitLangFromSlug } from "~/utils";
+import ThreeColumnLayout from "./ThreeColumnLayout.astro";
+import PostCard from "~/components/PostCard.astro";
+import Tag from "~/components/Tag.astro";
+import avatar from "~/assets/avatar.jpg";
+
+const relMe = "me external nofollow";
+const authorLinks = [
+  {
+    href: "https://github.com/EHfive",
+    title: "GitHub",
+    icon: "i-simple-icons-github",
+    rel: relMe,
+    class: "u-url",
+  },
+  {
+    href: "https://mastodon.social/@eh5",
+    title: "Fediverse",
+    icon: "i-simple-icons-mastodon",
+    rel: relMe,
+    class: "u-url",
+  },
+  {
+    href: "https://keybase.io/eh5",
+    title: "Keybase",
+    icon: "i-simple-icons-keybase",
+    rel: relMe,
+    class: "u-url",
+  },
+  {
+    href: "mailto:i@eh5.me",
+    title: "e-mail",
+    icon: "i-heroicons-envelope-solid",
+    rel: "me",
+    class: "u-email",
+  },
+];
+
+const { lang, title, posts, activeTag, tags } = Astro.props;
+---
+
+<ThreeColumnLayout title={title} class="h-feed">
+  <div
+    slot="left"
+    class="card xl:mx-8 xl:mt-8 border-0 xl:border-2 border-base-content/10"
+  >
+    <div class="h-card card-body items-center text-center space-y-4">
+      <div class="avatar max-w-32 w-full">
+        <div class="w-full rounded-full shadow-xl hover:shadow-2xl transition">
+          <Image class="u-photo" src={avatar} alt="eh5's avatar" />
+        </div>
+      </div>
+      <div class="p-name hidden">Huang-Huang Bao</div>
+      <!-- TODO: alias switching animation -->
+      <div class="p-nickname text-2xl font-bold w-full">EHfive</div>
+      <div class="p-note opacity-75 !mb-4 w-full">Coding for fun</div>
+      <div class="grid grid-flow-col gap-2">
+        <a class="u-url hidden" href="https://eh5.me/">Homepage</a>
+        {
+          authorLinks.map(({ href, title, icon, rel, class: prop }) => (
+            <a
+              href={href}
+              title={title}
+              rel={rel}
+              class="btn btn-ghost btn-sm btn-square p-0"
+              class:list={prop ? [prop] : undefined}
+            >
+              <span class="w-5 h-5" class:list={[icon]} />
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <div
+    slot="right"
+    class="flex xl:flex-wrap xl:justify-center gap-2 max-w-screen-md mx-auto <md:px-8 <xl:pb-8 <xl:overflow-x-auto xl:mx-8 xl:mt-8"
+  >
+    {
+      Object.entries(tags).map(([tag, count]) => (
+        <Tag active={activeTag === tag} tag={tag} lang={lang} num={count!} />
+      ))
+    }
+  </div>
+
+  {
+    activeTag && (
+      <>
+        <div class=" <md:px-8 <md:mt-8">
+          <div class="mb-1 text-sm">{t("feed.tagged")}</div>
+          <div class="text-3xl font-bold mb-4">{activeTag}</div>
+          <div class="text-base-content/60">
+            {t("feed.postCount", { count: posts.length })}
+          </div>
+          <div class="divider" />
+        </div>
+      </>
+    )
+  }
+
+  <a class="p-name u-url hidden" href="./">{title}</a>
+
+  <div class="md:space-y-8 <md:divide-y">
+    {
+      posts.map(
+        async ({ slug, data: { title, pubDate, summary, image, tags } }) => {
+          const [origLang, subSlug] = splitLangFromSlug(slug);
+          const optimizedImage = image && (await getImage({ src: image }));
+          return (
+            <PostCard
+              href={`/${lang}/blog/${subSlug}/`}
+              title={title}
+              summary={summary}
+              imageSrc={optimizedImage?.src}
+              pubDate={pubDate}
+              tags={tags}
+              origLang={
+                lang !== origLang ? languageInfo[origLang].short : undefined
+              }
+            />
+          );
+        }
+      )
+    }
+  </div>
+</ThreeColumnLayout>

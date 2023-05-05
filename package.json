@@ -1,0 +1,68 @@
+{
+  "name": "eh5-me-website",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "repository": {
+    "url": "https://github.com/EHfive/eh5.me.git"
+  },
+  "scripts": {
+    "astro": "astro",
+    "astro-i18n": "astro-i18n",
+    "build": "astro build",
+    "dev": "astro dev",
+    "preview": "astro preview",
+    "start": "astro dev",
+    "test": "tsc",
+    "tsx": "tsx",
+    "lint": "textlint .",
+    "i18n:install": "astro-i18n install",
+    "i18n:sync": "astro-i18n sync",
+    "i18n:extract:keys": "astro-i18n extract:keys"
+  },
+  "dependencies": {
+    "@astrojs/markdown-remark": "^2.2.0",
+    "@astrojs/mdx": "^0.19.1",
+    "@astrojs/sitemap": "^1.3.0",
+    "@astrojs/solid-js": "^2.1.1",
+    "@iconify-json/cib": "^1.1.4",
+    "@iconify-json/heroicons": "^1.1.10",
+    "@iconify-json/ic": "^1.1.13",
+    "@iconify-json/simple-icons": "^1.1.51",
+    "@material/material-color-utilities": "^0.2.6",
+    "@solid-primitives/scroll": "^2.0.14",
+    "@types/mdast": "^3.0.11",
+    "@unocss/reset": "^0.51.8",
+    "astro": "^2.4.1",
+    "astro-compressor": "^0.4.0",
+    "astro-i18n": "^1.6.10",
+    "babel-preset-solid": "^1.7.4",
+    "daisyui": "^2.51.6",
+    "feed": "^4.2.2",
+    "mdast-util-directive": "^2.2.4",
+    "rehype-autolink-headings": "^6.1.1",
+    "rehype-external-links": "^2.1.0",
+    "remark-directive": "^2.0.1",
+    "remark-github": "^11.2.4",
+    "remark-sectionize": "^2.0.0",
+    "remark-shiki-twoslash": "^3.1.3",
+    "solid-js": "^1.7.4",
+    "unified": "^10.1.2",
+    "unist-util-visit": "^4.1.2",
+    "unocss": "^0.51.8",
+    "unocss-preset-daisy": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/hast": "^2.3.4",
+    "opencc": "^1.1.3",
+    "textlint": "^13.3.2",
+    "textlint-rule-preset-zh-technical-writing": "^0.0.3",
+    "tsx": "^3.12.7",
+    "typescript": "^5.0.4"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "astro-i18n@1.6.10": "patches/astro-i18n@1.6.10.patch"
+    }
+  }
+}

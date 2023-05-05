@@ -1,0 +1,8 @@
+{
+  "feed": {
+    "tagged": "TAGGED",
+    "postCount{count:0}": "No post in collection",
+    "postCount{count:1}": "A collection of {count} post",
+    "postCount{count:2}": "A collection of {count} posts"
+  }
+}

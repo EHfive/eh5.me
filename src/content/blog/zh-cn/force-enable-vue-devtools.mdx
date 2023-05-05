@@ -1,0 +1,106 @@
+---
+title: 为生产构建的 Vue 应用强制开启 Vue Devtools
+summary: Vue.config.devtools = true
+pubDate: 2020-02-29 03:02:00
+image: ~/assets/force-enable-vue-devtools/post.png
+tags:
+  - web
+  - under the hood
+  - vue
+---
+
+:::warn
+此文写于 Vue 2.x 时期，文中内容也仅适用于 Vue 2.x。不过后续我在 [userscript](#userscript) 中添加了 Vue 3.x 支持
+:::
+
+如果你是一位 Vue 应用开发者，很可能，你的浏览器安装了 Vue.js devtools 浏览器扩展组件。那么你会注意到，当访问一些使用 Vue.js 创建的网站时，它会提示
+
+> **在此页面检测到了 Vue.js**
+>
+> 不能进行 Devtools 检查，因为这是 Vue 的生产模式或者应用作者特地关闭了 Devtools
+
+![vue detected](~/assets/force-enable-vue-devtools/vue-detected.png)
+
+根据 [vue-devtools](https://github.com/vuejs/devtools/tree/v5.3.4#force-enable-the-devtools)
+中的说法，开发者可以通过如下方式强制打开 Devtools（即 Vue Devtools，除非特殊指出，下文均称为 Devtools）
+
+```javascript
+// Before you create app
+Vue.config.devtools = process.env.NODE_ENV === "development";
+
+// After you create app
+window.__VUE_DEVTOOLS_GLOBAL_HOOK__.Vue = app.constructor;
+
+// then had to add in ./store.js as well.
+Vue.config.devtools = process.env.NODE_ENV === "development";
+```
+
+:::note
+注意第二条语句 `window.VUE_DEVTOOLS_GLOBAL_HOOK.Vue = app.constructor`，其中 `app` 即是 `Vue` 构造器的实例，`app.constructor` 即是 `Vue` 构造器
+:::
+
+那么我们是否可以手动取得 `Vue` 的实例和其构造器并通过这种方式为生产模式的 Vue 应用手动打开 Devtools 呢？答案是肯定的。
+
+## 演示
+
+接下来，我们将以 [bilibili](https://www.bilibili.com/) 做为我们的示例应用，你可以通过 Devtools 知道在此网站首页中存在 `Vue` 实例。
+
+打开元素查看器，可以找到一个 `id="app"` 的标签，你肯定想到了 `new Vue().$mount('#app')`。没错，这就是一个 Vue 根实例的挂载元素，我们在控制台中尝试获取此实例
+
+```javascript
+// Vue 实例是挂载在元素的 `__vue__` 属性上的
+app = document.querySelector("#app").__vue__;
+
+// 获取此实例的构造函数
+Vue = app.constructor;
+
+// 获取 `Vue` 基类，只有基类上有 `Vue.config` 属性
+while (Vue.super) {
+  Vue = Vue.super;
+}
+
+// 尝试打印 Vue.config
+console.log(Vue.config);
+```
+
+![retrieve-vue-in-console](~/assets/force-enable-vue-devtools/retrieve-vue-in-console.png)
+
+我们已经成功得到了 `Vue` 构造器，这和你使用 `import Vue from 'vue'` 等方式引入的 `Vue` 没什么不同（当然，取决于应用实际引入的 `Vue`）。接下来，就尝试使用上面所说的方法开启 Devtools，在控制台中继续执行下语句
+
+```javascript
+Vue.config.devtools = true;
+
+__VUE_DEVTOOLS_GLOBAL_HOOK__.Vue = Vue;
+```
+
+最后一步，关闭并重新打开浏览器的“开发者工具”面板，Wow，Vue Devtools 的面板出现了！
+
+![vue-devtools-panel](~/assets/force-enable-vue-devtools/vue-devtools-panel.png)
+
+## 底层原理
+
+有同学可能会疑惑上面配置的是 `Vue` 构造器，为什么在打开 Devtools 面板后，可以看到 `Vue` 的实例呢？
+
+这是因为在打开 Devtools 面板后，Devtools 会广度优先搜索 DOM 树，如果在某个元素节点找到了 `__vue__` 实例及其指向的根实例（`<vm>.$root`），并且构造此根实例的 `Vue.config.devtools == true`，则会将此根实例加入 Devtools。
+
+所以如果一个页面上有多个根实例源生自不同的 `Vue` 构造器，则需要为每个 Vue 基类执行 `Vue_no_x.config.devtools = true`。
+
+至于设置的 `__VUE_DEVTOOLS_GLOBAL_HOOK__.Vue`，其只用于在 Devtools 内部创建响应式存储，可以和创建根实例的 Vue 基类不同。此设计我猜测大概是为了减少 Devtools 插件打包体积而直接复用页面中现有的 `Vue`。
+
+## Userscript
+
+为了方便，我写了一个 [userscript](https://github.com/EHfive/userscripts/blob/master/userscripts/enbale-vue-devtools/src/main.js)
+脚本，可以使用 Tampermonkey 安装。你可以在 [Greasyfork](https://greasyfork.org/scripts/396985-enable-vue-devtools)
+上安装，也可点击此 [GitHub Raw File](https://github.com/EHfive/userscripts/raw/master/userscripts/enbale-vue-devtools/dist/enable-vue-devtools.user.js) 链接安装。
+
+至于为 Vuex 实例开启 Devtools，其实与上面的方法一样，即手动再次执行 vuex 内部开启 Devtools 的代码逻辑，具体可参阅我的脚本代码或下相关代码中的 vuex 的链接。
+
+## 相关代码
+
+这是几段关联的 vue，vuex，vue-devtools 源码
+
+- https://github.com/vuejs/vue/blob/6fe07ebf5ab3fea1860c59fe7cdd2ec1b760f9b0/src/platforms/web/runtime/index.js#L45-L52
+- https://github.com/vuejs/vue/blob/52719ccab8fccffbdf497b96d3731dc86f04c1ce/src/core/global-api/extend.js#L43
+- https://github.com/vuejs/vuex/blob/e0126533301febf66072f1865cf9a77778cf2176/src/store.js#L67-L70
+- https://github.com/vuejs/vuex/blob/665455f8daf8512e7adbf63c2842bc0b1e39efdb/src/plugins/devtool.js
+- https://github.com/vuejs/vue-devtools/blob/933063fd06860464be4bfd8c83ba09d7fc2c753e/packages/app-backend/src/index.js#L218-L225

@@ -1,0 +1,73 @@
+---
+export interface Props {
+  href: string;
+  title: string;
+  tags?: string[];
+  summary?: string;
+  pubDate: Date;
+  modDate?: Date;
+  imageSrc?: string;
+  imageAlt?: string;
+  origLang?: string;
+}
+
+const {
+  href,
+  title,
+  summary,
+  imageSrc,
+  imageAlt,
+  pubDate,
+  modDate,
+  tags,
+  origLang,
+} = Astro.props;
+---
+
+<div
+  data-tags={tags ? JSON.stringify(tags) : ""}
+  class="h-entry card bg-base-100 shadow-xl overflow-hidden group !<md:rounded-0 !<md:before:rounded-0 !<md:shadow-none transition duration-500 md:hover:-translate-y-0.5"
+  class:list={{ "image-full": !!imageSrc }}
+>
+  {
+    imageSrc && (
+      <figure>
+        <img
+          class="u-photo absolute w-full object-cover"
+          loading="lazy"
+          decoding="async"
+          src={imageSrc}
+          alt={imageAlt}
+        />
+      </figure>
+    )
+  }
+  <a class="p-author h-card hidden" href="https://eh5.me/">Huang-Huang Bao</a>
+  <div class="card-body">
+    <div class="font-semibold">
+      <a href={href} class="font-semibold">
+        <time class="dt-published opacity-75" datetime={pubDate.toISOString()}
+          >{pubDate.toLocaleDateString()}</time
+        >
+        {
+          modDate && (
+            <time
+              class="dt-updated opacity-75 hidden"
+              datetime={modDate?.toISOString()}
+            >
+              {modDate?.toLocaleDateString()}
+            </time>
+          )
+        }
+      </a>
+      {origLang}
+    </div>
+    <h2 class="card-title text-3xl">
+      <a
+        class="p-name u-url underline decoration-4 decoration-transparent transition duration-300 group-hover:decoration-primary"
+        href={href}>{title}</a
+      >
+    </h2>
+    {summary && <p class="p-summary">{summary}</p>}
+  </div>
+</div>

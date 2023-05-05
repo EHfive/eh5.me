@@ -1,0 +1,25 @@
+---
+export interface Props {
+  lang: string;
+  tag: string;
+  num: number;
+  active?: boolean;
+}
+
+const { lang, tag, num, active } = Astro.props;
+---
+
+<a
+  class="btn btn-sm normal-case border-2 border-dotted border-base-content/20"
+  class:list={{
+    "btn-ghost": !active,
+    "btn-secondary": active,
+    "shadow-lg": active,
+    "!border-transparent": active,
+  }}
+  href={!active ? `/${lang}/tag/${tag}` : `/${lang}/`}
+>
+  <span class="opacity-80">#</span>
+  {tag}
+  <!-- <span class="pl-1" class:list={{ "text-accent": !active }}>{num}</span> -->
+</a>

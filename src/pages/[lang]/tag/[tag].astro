@@ -1,0 +1,41 @@
+---
+import { astroI18n } from "astro-i18n";
+import { tagsFromPosts, tagCountFromPosts } from "~/utils";
+import { allPosts, allPostsFilterByLang, isNotDraft } from "~/content";
+import { languages } from "~/i18n";
+import BlogFeedLayout from "~/layouts/BlogFeedLayout.astro";
+
+astroI18n.init(Astro);
+
+export async function getStaticPaths() {
+  const paths = [];
+
+  const allTags = tagsFromPosts(allPosts);
+  for (const lang of languages) {
+    for (const tag of allTags) {
+      paths.push({
+        params: {
+          lang,
+          tag,
+        },
+      });
+    }
+  }
+  return paths;
+}
+
+const { lang, tag } = Astro.params;
+
+const posts = allPostsFilterByLang(lang!).filter(isNotDraft);
+const tagCount = tagCountFromPosts(posts);
+
+const taggedPosts = posts.filter(({ data }) => data.tags.includes(tag!));
+---
+
+<BlogFeedLayout
+  lang={lang!}
+  title={tag!}
+  posts={taggedPosts}
+  tags={tagCount}
+  activeTag={tag}
+/>
